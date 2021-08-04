@@ -1,0 +1,48 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 25 Nov 1995    |
+-- +---------------------------+
+
+-- Function: overloaded operators for type "twos_complement"
+--           relational operators and concatenation are 
+--           pre-defined for any scalar or 1-d array of discrete types.           
+
+-- Synthesis script: read -f vhdl ops_2sC.dec
+
+-- A twos_complement vector holds data which
+-- is numeric in nature. The arithmetic operators consider the operands to be 
+-- numbers which have no sense of "wordlength" and thus the arithmetic functions
+-- permit operands of different wordlength; this is reflected in the  
+-- wordlength check and sign-extension function within the arithmetic functions.
+
+library vfp;
+
+package twos_complement_operators is
+  use vfp.twos_complement_types.all;
+
+function "not" (a: twos_complement) return twos_complement;         -- 25.11.95
+function "and" (a, b: twos_complement) return twos_complement;      -- 25.11.95
+function "or" (a, b: twos_complement) return twos_complement;       -- 25.11.95  
+function "xor" (a, b: twos_complement) return twos_complement;      -- 25.11.95
+function "nand" (a, b: twos_complement) return twos_complement;     -- 25.11.95
+function "nor" (a, b: twos_complement) return twos_complement;      -- 25.11.95  
+-- function "xnor" (a, b: twos_complement) return twos_complement;  -- 25.11.95
+
+function "+" (a, b: twos_complement) return twos_complement;       -- 25.11.95
+function "-" (a, b: twos_complement) return twos_complement;       -- 25.11.95
+function "*" (a, b: twos_complement) return twos_complement;     -- 25.11.95
+function "/" (a, b: twos_complement) return twos_complement;     -- 25.11.95
+function "mod" (a, b: twos_complement) return twos_complement;   -- 25.11.95
+function "rem" (a, b: twos_complement) return twos_complement;  -- 25.11.95
+function "**" (a, b: twos_complement) return twos_complement;    -- 25.11.95
+function "+" (a: twos_complement) return twos_complement;        -- 25.11.95
+function "-" (a: twos_complement) return twos_complement;        -- 25.11.95
+function "abs" (a: twos_complement) return twos_complement;      -- 25.11.95
+
+end twos_complement_operators;
+
+
+
+
+

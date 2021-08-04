@@ -1,0 +1,1844 @@
+Release 8.2i - xst I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 2.54 s | Elapsed : 0.00 / 3.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 2.54 s | Elapsed : 0.00 / 3.00 s
+ 
+--> Reading design: smartbrd.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "smartbrd.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "smartbrd"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : smartbrd
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Write Timing Constraints           : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+lso                                : smartbrd.lso
+Read Cores                         : YES
+cross_clock_analysis               : NO
+verilog2001                        : YES
+safe_implementation                : No
+Optimize Instantiated Primitives   : NO
+use_clock_enable                   : Yes
+use_sync_set                       : Yes
+use_sync_reset                     : Yes
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/upcnt4.vhd" in Library work.
+Architecture definition of Entity upcnt4 is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/upcnt5.vhd" in Library work.
+Architecture definition of Entity upcnt5 is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/shift.vhd" in Library work.
+Architecture definition of Entity shift8 is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd" in Library work.
+Architecture definition of Entity sck_logic is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd" in Library work.
+Architecture definition of Entity spi_control_sm is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_rcv_shift_reg.vhd" in Library work.
+Architecture definition of Entity spi_rcv_shift_reg is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_xmit_shift_reg.vhd" in Library work.
+Architecture definition of Entity spi_xmit_shift_reg is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd" in Library work.
+Architecture low_level_definition of Entity kcuart_rx is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd" in Library work.
+Architecture low_level_definition of Entity bbfifo_16x8 is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd" in Library work.
+Architecture low_level_definition of Entity kcuart_tx is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" in Library work.
+Architecture low_level_definition of Entity up is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" in Library work.
+Architecture low_level_definition of Entity adc_ctrl is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" in Library work.
+Architecture low_level_definition of Entity io_ctrl is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_tx.vhd" in Library work.
+Architecture macro_level_definition of Entity uart_tx is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_rx.vhd" in Library work.
+Architecture macro_level_definition of Entity uart_rx is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_interface.vhd" in Library work.
+Architecture schematic of Entity spi_interface is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/i2c_control.vhd" in Library work.
+Architecture behave of Entity i2c_control is up to date.
+Compiling vhdl file "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/smartbrd.vhd" in Library work.
+Entity <smartbrd> compiled.
+Entity <smartbrd> (Architecture <behavioral>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <smartbrd> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <uP> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <adc_ctrl> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <bbfifo_16x8> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <io_ctrl> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <uart_tx> in library <work> (architecture <macro_level_definition>).
+
+Analyzing hierarchy for entity <uart_rx> in library <work> (architecture <macro_level_definition>).
+
+Analyzing hierarchy for entity <spi_interface> in library <work> (architecture <schematic>).
+
+Analyzing hierarchy for entity <i2c_control> in library <work> (architecture <behave>).
+
+Analyzing hierarchy for entity <kcuart_tx> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <bbfifo_16x8> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <kcuart_rx> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <sck_logic> in library <work> (architecture <definition>).
+
+Analyzing hierarchy for entity <spi_control_sm> in library <work> (architecture <definition>).
+
+Analyzing hierarchy for entity <spi_rcv_shift_reg> in library <work> (architecture <definition>).
+
+Analyzing hierarchy for entity <spi_xmit_shift_reg> in library <work> (architecture <definition>).
+
+Analyzing hierarchy for entity <UPCNT5> in library <work> (architecture <definition>).
+
+Analyzing hierarchy for entity <SHIFT8> in library <work> (architecture <definition>).
+
+Analyzing hierarchy for entity <UPCNT4> in library <work> (architecture <definition>).
+
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 271: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1182: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 434: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 465: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 588: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 596: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 363: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 405: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 507: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 579: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 664: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1091: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1118: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1202: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1251: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd" line 237: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd" line 270: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd" line 318: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd" line 254: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 314: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 353: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 385: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 395: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 414: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 424: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 450: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 475: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 536: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 569: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 776: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 853: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 868: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 919: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 938: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1226: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1283: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1293: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1309: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1397: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1430: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd" line 138: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd" line 219: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd" line 133: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd" line 281: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd" line 300: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd" line 354: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd" line 236: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 810: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 1350: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd" line 888: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_00> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_01> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_02> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_03> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_04> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_05> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_06> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_07> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_08> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_09> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_0A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_0B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_0C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_0D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_0E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_0F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_10> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_11> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_12> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_13> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_14> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_15> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_16> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_17> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_18> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_19> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_1A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_1B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_1C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_1D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_1E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_1F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_20> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_21> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_22> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_23> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_24> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_25> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_26> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_27> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_28> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_29> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_2A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_2B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_2C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_2D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_2E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_2F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_30> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_31> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_32> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_33> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_34> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_35> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_36> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_37> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_38> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_39> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_3A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_3B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_3C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_3D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_3E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INIT_3F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_00> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_01> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_02> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_03> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_04> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_05> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_06> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd" line 182: attribute on instance <INITP_07> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_00> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_01> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_02> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_03> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_04> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_05> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_06> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_07> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_08> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_09> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_0A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_0B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_0C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_0D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_0E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_0F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_10> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_11> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_12> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_13> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_14> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_15> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_16> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_17> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_18> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_19> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_1A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_1B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_1C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_1D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_1E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_1F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_20> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_21> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_22> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_23> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_24> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_25> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_26> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_27> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_28> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_29> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_2A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_2B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_2C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_2D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_2E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_2F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_30> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_31> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_32> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_33> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_34> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_35> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_36> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_37> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_38> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_39> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_3A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_3B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_3C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_3D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_3E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INIT_3F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_00> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_01> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_02> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_03> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_04> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_05> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_06> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD" line 182: attribute on instance <INITP_07> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd" line 104: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+Building hierarchy successfully finished.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <smartbrd> in library <work> (Architecture <behavioral>).
+Entity <smartbrd> analyzed. Unit <smartbrd> generated.
+
+Analyzing Entity <uP> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  1" for instance <t_state_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance toggle_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <toggle_flop> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance reset_flop1 should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  1" for instance <reset_flop1> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance reset_flop2 should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  1" for instance <reset_flop2> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance int_capture_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <int_capture_flop> in unit <uP>.
+    Set user-defined property "INIT =  0080" for instance <int_pulse_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance int_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <int_flop> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance ack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <ack_flop> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shadow_carry_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shadow_carry_flop> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shadow_zero_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shadow_zero_flop> in unit <uP>.
+    Set user-defined property "INIT =  EAAA" for instance <int_update_lut> in unit <uP>.
+    Set user-defined property "INIT =  04" for instance <int_value_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance int_enable_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <int_enable_flop> in unit <uP>.
+    Set user-defined property "INIT =  7400" for instance <move_group_lut> in unit <uP>.
+    Set user-defined property "INIT =  5A3C" for instance <condition_met_lut> in unit <uP>.
+    Set user-defined property "INIT =  2F" for instance <normal_count_lut> in unit <uP>.
+    Set user-defined property "INIT =  1000" for instance <call_type_lut> in unit <uP>.
+    Set user-defined property "INIT =  5400" for instance <push_pop_lut> in unit <uP>.
+    Set user-defined property "INIT =  D" for instance <valid_move_lut> in unit <uP>.
+    Set user-defined property "INIT =  41FC" for instance <flag_type_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance flag_write_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <flag_write_flop> in unit <uP>.
+    Set user-defined property "INIT =  8" for instance <flag_enable_lut> in unit <uP>.
+    Set user-defined property "INIT =  0001" for instance <low_zero_lut> in unit <uP>.
+    Set user-defined property "INIT =  0001" for instance <high_zero_lut> in unit <uP>.
+    Set user-defined property "INIT =  3F" for instance <sel_shadow_zero_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance zero_flag_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <zero_flag_flop> in unit <uP>.
+    Set user-defined property "INIT =  6996" for instance <low_parity_lut> in unit <uP>.
+    Set user-defined property "INIT =  6996" for instance <high_parity_lut> in unit <uP>.
+    Set user-defined property "INIT =  F3FF" for instance <sel_parity_lut> in unit <uP>.
+    Set user-defined property "INIT =  F3" for instance <sel_arith_carry_lut> in unit <uP>.
+    Set user-defined property "INIT =  C" for instance <sel_shift_carry_lut> in unit <uP>.
+    Set user-defined property "INIT =  3" for instance <sel_shadow_carry_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance carry_flag_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <carry_flag_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[0].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[0].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[0].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[0].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[1].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[1].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[1].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[1].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[2].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[2].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[2].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[2].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[3].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[3].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[3].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[3].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[4].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[4].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[4].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[4].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[5].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[5].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[5].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[5].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[6].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[6].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[6].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[6].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[7].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[7].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[7].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[7].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[8].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[8].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[8].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[8].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[9].vector_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[9].value_select_mux> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pc_loop[9].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pc_loop[9].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  0145" for instance <register_type_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance register_write_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <register_write_flop> in unit <uP>.
+    Set user-defined property "INIT =  8" for instance <register_enable_lut> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[0].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[0].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[1].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[1].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[2].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[2].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[3].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[3].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[4].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[4].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[5].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[5].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[6].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[6].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[7].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[7].operand_select_mux> in unit <uP>.
+    Set user-defined property "INIT =  0400" for instance <memory_type_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance memory_write_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <memory_write_flop> in unit <uP>.
+    Set user-defined property "INIT =  8000" for instance <memory_enable_lut> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[0].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[0].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[0].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[1].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[1].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[1].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[2].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[2].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[2].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[3].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[3].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[3].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[4].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[4].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[4].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[5].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[5].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[5].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[6].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[6].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[6].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[7].memory_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance store_loop[7].store_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <store_loop[7].store_flop> in unit <uP>.
+    Set user-defined property "INIT =  FFE2" for instance <sel_logical_lut> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[0].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[0].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[0].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[1].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[1].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[1].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[2].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[2].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[2].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[3].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[3].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[3].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[4].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[4].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[4].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[5].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[5].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[5].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[6].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[6].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[6].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[7].logical_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance logical_loop[7].logical_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <logical_loop[7].logical_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <high_shift_in_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <low_shift_in_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_carry_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pipeline_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pipeline_bit> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[0].lsb_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[0].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[0].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[1].mid_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[1].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[1].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[2].mid_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[2].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[2].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[3].mid_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[3].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[3].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[4].mid_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[4].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[4].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[5].mid_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[5].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[5].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[6].mid_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[6].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[6].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[7].msb_shift.shift_mux_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance shift_loop[7].shift_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <shift_loop[7].shift_flop> in unit <uP>.
+    Set user-defined property "INIT =  1F" for instance <sel_arith_lut> in unit <uP>.
+    Set user-defined property "INIT =  6C" for instance <arith_loop[0].lsb_arith.arith_carry_in_lut> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[0].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[0].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[0].arith_flop> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[1].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[1].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[1].arith_flop> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[2].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[2].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[2].arith_flop> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[3].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[3].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[3].arith_flop> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[4].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[4].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[4].arith_flop> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[5].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[5].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[5].arith_flop> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[6].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[6].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[6].arith_flop> in unit <uP>.
+WARNING:Xst:1961 - The length of the hex value for the attribute INIT on instance arith_loop[7].msb_arith.arith_carry_out_lut should be 2 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  2" for instance <arith_loop[7].msb_arith.arith_carry_out_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[7].msb_arith.arith_carry_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[7].msb_arith.arith_carry_flop> in unit <uP>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[7].arith_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance arith_loop[7].arith_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <arith_loop[7].arith_flop> in unit <uP>.
+    Set user-defined property "INIT =  0002" for instance <input_fetch_type_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance sel_group_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <sel_group_flop> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[0].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[0].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[1].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[1].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[2].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[2].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[3].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[3].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[4].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[4].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[5].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[5].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[6].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[6].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[7].or_lut> in unit <uP>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[7].mux_lut> in unit <uP>.
+    Set user-defined property "INIT =  0010" for instance <io_decode_lut> in unit <uP>.
+    Set user-defined property "INIT =  4000" for instance <write_active_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance write_strobe_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <write_strobe_flop> in unit <uP>.
+    Set user-defined property "INIT =  0100" for instance <read_active_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance read_strobe_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <read_strobe_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[0].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[0].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[0].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[1].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[1].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[1].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[2].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[2].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[2].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[3].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[3].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[3].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[4].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[4].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[4].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[5].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[5].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[5].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[6].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[6].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[6].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[7].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[7].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[7].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[8].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[8].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[8].stack_flop> in unit <uP>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[9].stack_bit> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_ram_loop[9].stack_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[9].stack_flop> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_count_loop[0].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[0].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  6555" for instance <stack_count_loop[0].lsb_stack_count.count_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_count_loop[1].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[1].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[1].mid_stack_count.count_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_count_loop[2].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[2].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[2].mid_stack_count.count_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_count_loop[3].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[3].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[3].mid_stack_count.count_lut> in unit <uP>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stack_count_loop[4].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[4].register_bit> in unit <uP>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[4].msb_stack_count.count_lut> in unit <uP>.
+Entity <uP> analyzed. Unit <uP> generated.
+
+Analyzing Entity <adc_ctrl> in library <work> (Architecture <low_level_definition>).
+WARNING:Xst:1961 - The length of the hex value for the attribute INIT on instance ram_1024_x_18 should be 18 bits long. The current value set is 20 bits long.  Value has been truncated
+    Set user-defined property "INIT =  00000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_00 =  E0060000023E01E501E501E501E501E5017502430523016002430510022D0131" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_01 =  E0068001600650164FFF549F2E0454982E014E00C0010FFF40A4E005E0040001" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_02 =  00116301620001AB1B50052001C9600001C960010243052C01AB1B500520C080" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_03 =  0520A7008601E7FFE6FF4040052B543B278002430520A700A600050600F60127" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_04 =  00305061440201EC00775061440101D800EF640463016200019F019F007B0203" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_05 =  009C5061440101FF00385061440601FE000C5061440501FC00185061440301F8" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_06 =  547443E063016200019F01E002430517019FA7068672A700A600050600F601FF" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_07 =  01AB1B508530650A01144014007B0203547942FF5479431F4079053E54744200" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_08 =  01AB1B508530650701AB1B508530650801AB1B508530650901AB1B50052E019F" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_09 =  C00040A4000754A4400880016004C000019FA00001AB1B50050D01AB1B500520" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0A =  02030547024305100134D20002060206020602066205E004000154A4C0016004" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0B =  54C7400240F102030520020305200203053154BE400160040203052D0203053D" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0C =  40F102030520020305200203053554D0400340F1020305200203052002030532" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0D =  0520020305300203053254E2400540F102030520020305300203053154D94004" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0E =  0530020305300203053140F102030520020305300203053554EB400640F10203" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_0F =  0A0F198008FF50FE238008000400050006000700401454F12005400001E00203" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_10 =  D4205D1320015500CA010900080003000206B790B680B53094205D070008010E" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_11 =  0700060015701460A0005516C0018801F480011C08070005A000F790F680F530" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_12 =  5523C1010208030E07000606B5309420412B06075928F530D420010D03A00200" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_13 =  C008E001020023404301C008E001C2040108C008E0080131A000C00800AEA000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_14 =  4301C008E001C008E0010122C008E010C008E0100131A000C008E0085538C101" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_15 =  A0000608070A0608070A0808090A0808090A554BC10109000800070006002380" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_16 =  020305610203056F020305620203057402030572020305610203056D02030553" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_17 =  056E0203056F02030543020305200203054F02030549A0000203056402030572" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_18 =  0203053D0203054102030556A0000203056C0203056F02030572020305740203" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_19 =  0E02A00001AB0B6101AB0B75A0000203053D020305440203052F02030541A000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1A =  C00110B055AB20024004A00055A0CE01020315B0020305741B10410620044004" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1B =  1010120001C4000E000E000E000E110041B28101B0004B0A01AB7B100110A000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1C =  1B50156001AB1B501520161001B8A000803A800759C7C00AA000110001C4A00F" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1D =  A00055DCC20101D60219A00055D7C10101D20128A00055D3C001000BA00001AB" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1E =  A000C440E40101D2C440E401A00055E6C40101E00432A00055E1C30101DB0314" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_1F =  01D601F00406040604060407145001D201F0C408A4F01450A00001EAC440A4F8" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_20 =  01EAC4400406040604070407145001D201EAC440C40CA4F01450A000C44004F0" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_21 =  01D2C440E40101D2C440E401450201D2C440E401C440040EA000C44004F001D6" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_22 =  01F0043001E0A00001D6C4400404D500000E000E000E000EA5F0C440E4014002" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_23 =  01F4050101F4050C01F4050601F4052801D601F0042001D601F001DB01F001E0" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_24 =  E901E8000145A00001F4C5C0A50FA00001F4C580A50F52492510A00001DB01DB" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_25 =  00000000000000000000000000000000000000000000000080010F00E703E602" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INIT_3F =  424D000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_00 =  C4FFDDCDD0FCD56C34343434343400FF1433716C030CCCC293774CE88FFFF3CF" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_01 =  03400F4F333CCCDF3337CCCDF3337CCCDF3334CCCCCAA234F353EC30C4C4C4C3" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_02 =  333332CCCCCCCCCCAAAAB6A922088E8D892223A2DAA5ED4000B5B095776A957A" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_03 =  FAA3C0B8A38B72DCB72DCB4B0C0E5D8C0EA8D9C28D2DCC042CCB3332CCCB3333" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_04 =  0000000000000000000000CAAEC2C36FCCCCF3FFCEE0AA20E38388A3EAA3E028" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+WARNING:Xst:1961 - The length of the hex value for the attribute SRVAL on instance ram_1024_x_18 should be 18 bits long. The current value set is 20 bits long.  Value has been truncated
+    Set user-defined property "SRVAL =  00000" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+    Set user-defined property "write_mode =  WRITE_FIRST" for instance <ram_1024_x_18> in unit <adc_ctrl>.
+Entity <adc_ctrl> analyzed. Unit <adc_ctrl> generated.
+
+Analyzing Entity <bbfifo_16x8> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[0].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[1].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[2].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[3].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[4].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[5].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[6].data_srl> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0000" for instance <data_width_loop[7].data_srl> in unit <bbfifo_16x8>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance count_width_loop[0].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <count_width_loop[0].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[0].count_lut> in unit <bbfifo_16x8>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance count_width_loop[1].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <count_width_loop[1].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[1].count_lut> in unit <bbfifo_16x8>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance count_width_loop[2].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <count_width_loop[2].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[2].count_lut> in unit <bbfifo_16x8>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance count_width_loop[3].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <count_width_loop[3].register_bit> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  6606" for instance <count_width_loop[3].count_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  0001" for instance <zero_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  8000" for instance <full_lut> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  BFA0" for instance <dp_lut> in unit <bbfifo_16x8>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance dp_flop should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <dp_flop> in unit <bbfifo_16x8>.
+    Set user-defined property "INIT =  C4" for instance <valid_lut> in unit <bbfifo_16x8>.
+Entity <bbfifo_16x8> analyzed. Unit <bbfifo_16x8> generated.
+
+Analyzing Entity <io_ctrl> in library <work> (Architecture <low_level_definition>).
+WARNING:Xst:1961 - The length of the hex value for the attribute INIT on instance ram_1024_x_18 should be 18 bits long. The current value set is 20 bits long.  Value has been truncated
+    Set user-defined property "INIT =  00000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_00 =  40025405200240010EF40F0100E95C0CEF00CE010077ED03EDFF40000EF40F01" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_01 =  CA80EA020A0C401E0A02501D2001E000A07F501E208060006A02A000C0804000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_02 =  0541009F054F009F0542009F0554009F0552009F0541009F054D009F0553A000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_03 =  009F0561009F052E009F0577009F0577009F0577A000009F0544009F0552009F" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_04 =  009F0565009F056C009F0561009F0563009F0573009F0579009F056C009F0572" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_05 =  009F056F009F0569009F052F009F056D009F056F009F0563009F052E009F0573" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_06 =  C001000BA000009F0520A000009F0564009F0572009F0561009F056F009F0562" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_07 =  547DC30100770314A0005478C20100720219A0005473C101006E0128A000546F" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_08 =  A0000086C440A4F8A000C440E401006EC440E401A0005482C401007C0432A000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_09 =  1450A000C44004F00072008C04060406040604071450006E008CC408A4F01450" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_0A =  A000C44004F000720086C44004060406040704071450006E0086C440C40CA4F0" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_0B =  A5F0C440E4014002006EC440E401006EC440E4014502006EC440E401C440040E" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_0C =  008C0077008C007C008C0430007CA0000072C4400404D500000E000E000E000E" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_0D =  2510A00000770077009005010090050C00900506009005280072008C04200072" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_0E =  0000000000000000A00000900518A0000090C5C0A50FA0000090C580A50F50E5" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INIT_3F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_00 =  DCB72DCB4B2CCCCCCCCCCCCCCCCCCCCCCCCCCB3333333332ABB63428F40F5E30" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_01 =  0000000000B2C2C36FCCCCF3FFCEE0AA20E38388A3EAA3E028FAA3C0B8A38B72" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "INITP_07 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+WARNING:Xst:1961 - The length of the hex value for the attribute SRVAL on instance ram_1024_x_18 should be 18 bits long. The current value set is 20 bits long.  Value has been truncated
+    Set user-defined property "SRVAL =  00000" for instance <ram_1024_x_18> in unit <io_ctrl>.
+    Set user-defined property "write_mode =  WRITE_FIRST" for instance <ram_1024_x_18> in unit <io_ctrl>.
+Entity <io_ctrl> analyzed. Unit <io_ctrl> generated.
+
+Analyzing Entity <uart_tx> in library <work> (Architecture <macro_level_definition>).
+Entity <uart_tx> analyzed. Unit <uart_tx> generated.
+
+Analyzing Entity <kcuart_tx> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  E4FF" for instance <mux1_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  E4FF" for instance <mux2_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  E4FF" for instance <mux3_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  E4FF" for instance <mux4_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance pipeline_serial should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <pipeline_serial> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance count_width_loop[0].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <count_width_loop[0].register_bit> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <count_width_loop[0].count_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance count_width_loop[1].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <count_width_loop[1].register_bit> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <count_width_loop[1].count_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance count_width_loop[2].register_bit should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <count_width_loop[2].register_bit> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <count_width_loop[2].count_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  10" for instance <ready_lut> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0190" for instance <start_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance Tx_start_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <Tx_start_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  1540" for instance <run_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance Tx_run_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <Tx_run_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  94" for instance <hot_state_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance hot_state_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <hot_state_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0000" for instance <delay14_srl> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance Tx_bit_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <Tx_bit_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  0180" for instance <stop_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance Tx_stop_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <Tx_stop_reg> in unit <kcuart_tx>.
+    Set user-defined property "INIT =  8" for instance <complete_lut> in unit <kcuart_tx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance Tx_complete_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <Tx_complete_reg> in unit <kcuart_tx>.
+Entity <kcuart_tx> analyzed. Unit <kcuart_tx> generated.
+
+Analyzing Entity <uart_rx> in library <work> (Architecture <macro_level_definition>).
+Entity <uart_rx> analyzed. Unit <uart_rx> generated.
+
+Analyzing Entity <kcuart_rx> in library <work> (Architecture <low_level_definition>).
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance sync_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <sync_reg> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance stop_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <stop_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[0].lsbs.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[0].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[0].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[1].lsbs.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[1].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[1].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[2].lsbs.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[2].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[2].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[3].lsbs.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[3].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[3].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[4].lsbs.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[4].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[4].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[5].lsbs.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[5].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[5].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[6].lsbs.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[6].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[6].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <data_loop[7].msb.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance data_loop[7].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <data_loop[7].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <start_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance start_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <start_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <edge_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance edge_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <edge_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0040" for instance <valid_lut> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  54" for instance <purge_lut> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance purge_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <purge_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[0].lsb.delay15_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[0].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[0].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[1].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[1].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[1].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[2].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[2].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[2].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[3].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[3].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[3].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[4].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[4].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[4].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[5].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[5].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[5].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[6].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[6].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[6].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[7].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[7].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[7].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  0000" for instance <valid_loop[8].msbs.delay16_srl> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance valid_loop[8].data_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <valid_loop[8].data_reg> in unit <kcuart_rx>.
+    Set user-defined property "INIT =  8" for instance <strobe_lut> in unit <kcuart_rx>.
+WARNING:Xst:1963 - The length of the binary value for the attribute INIT on instance strobe_reg should be 1 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  0" for instance <strobe_reg> in unit <kcuart_rx>.
+Entity <kcuart_rx> analyzed. Unit <kcuart_rx> generated.
+
+Analyzing Entity <spi_interface> in library <work> (Architecture <schematic>).
+WARNING:Xst:37 - Unknown property "fpga_dont_touch".
+Entity <spi_interface> analyzed. Unit <spi_interface> generated.
+
+Analyzing Entity <sck_logic> in library <work> (Architecture <definition>).
+WARNING:Xst:752 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd" line 88: Unconnected input port 'data' of component 'upcnt5' is tied to default value.
+WARNING:Xst:752 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd" line 88: Unconnected input port 'load' of component 'upcnt5' is tied to default value.
+INFO:Xst:1561 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd" line 126: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd" line 173: Mux is complete : default of case is discarded
+INFO:Xst:1561 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd" line 202: Mux is complete : default of case is discarded
+Entity <sck_logic> analyzed. Unit <sck_logic> generated.
+
+Analyzing Entity <upcnt5> in library <work> (Architecture <definition>).
+Entity <upcnt5> analyzed. Unit <upcnt5> generated.
+
+Analyzing Entity <spi_control_sm> in library <work> (Architecture <definition>).
+WARNING:Xst:752 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd" line 120: Unconnected input port 'data' of component 'upcnt4' is tied to default value.
+WARNING:Xst:752 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd" line 120: Unconnected input port 'load' of component 'upcnt4' is tied to default value.
+Entity <spi_control_sm> analyzed. Unit <spi_control_sm> generated.
+
+Analyzing Entity <upcnt4> in library <work> (Architecture <definition>).
+Entity <upcnt4> analyzed. Unit <upcnt4> generated.
+
+Analyzing Entity <spi_rcv_shift_reg> in library <work> (Architecture <definition>).
+Entity <spi_rcv_shift_reg> analyzed. Unit <spi_rcv_shift_reg> generated.
+
+Analyzing Entity <spi_xmit_shift_reg> in library <work> (Architecture <definition>).
+Entity <spi_xmit_shift_reg> analyzed. Unit <spi_xmit_shift_reg> generated.
+
+Analyzing Entity <i2c_control> in library <work> (Architecture <behave>).
+WARNING:Xst:819 - "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/i2c_control.vhd" line 253: The following signals are missing in the process sensitivity list:
+   state.
+Entity <i2c_control> analyzed. Unit <i2c_control> generated.
+
+Analyzing Entity <SHIFT8> in library <work> (Architecture <definition>).
+Entity <SHIFT8> analyzed. Unit <SHIFT8> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <spi_rcv_shift_reg>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_rcv_shift_reg.vhd".
+WARNING:Xst:646 - Signal <data_int<7>> is assigned but never used.
+    Found 8-bit register for signal <data_int>.
+    Found 1-bit register for signal <miso_neg>.
+    Found 1-bit register for signal <miso_pos>.
+    Found 3-bit up counter for signal <rcv_bitcnt_int>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred  10 D-type flip-flop(s).
+Unit <spi_rcv_shift_reg> synthesized.
+
+
+Synthesizing Unit <spi_xmit_shift_reg>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_xmit_shift_reg.vhd".
+    Found 1-bit tristate buffer for signal <mosi>.
+    Found 8-bit register for signal <data_int>.
+    Found 1-bit register for signal <mosi_int>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+	inferred   1 Tristate(s).
+Unit <spi_xmit_shift_reg> synthesized.
+
+
+Synthesizing Unit <upcnt5>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/upcnt5.vhd".
+    Found 5-bit up counter for signal <q_int>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <upcnt5> synthesized.
+
+
+Synthesizing Unit <upcnt4>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/upcnt4.vhd".
+    Found 4-bit up counter for signal <q_int>.
+    Summary:
+	inferred   1 Counter(s).
+Unit <upcnt4> synthesized.
+
+
+Synthesizing Unit <SHIFT8>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/shift.vhd".
+    Found 8-bit register for signal <data_int>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <SHIFT8> synthesized.
+
+
+Synthesizing Unit <uP>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd".
+Unit <uP> synthesized.
+
+
+Synthesizing Unit <adc_ctrl>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd".
+Unit <adc_ctrl> synthesized.
+
+
+Synthesizing Unit <bbfifo_16x8>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd".
+Unit <bbfifo_16x8> synthesized.
+
+
+Synthesizing Unit <io_ctrl>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD".
+Unit <io_ctrl> synthesized.
+
+
+Synthesizing Unit <i2c_control>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/i2c_control.vhd".
+WARNING:Xst:647 - Input <madr<0>> is never used.
+WARNING:Xst:646 - Signal <zero_sig> is assigned but never used.
+WARNING:Xst:646 - Signal <i2c_shiftout> is assigned but never used.
+WARNING:Xst:1780 - Signal <bit_cnt_clr> is never used or assigned.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 7                                              |
+    | Transitions        | 19                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 12                                             |
+    | Clock              | scl (falling_edge)                             |
+    | Reset              | $or0000 (positive)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found finite state machine <FSM_1> for signal <scl_state>.
+    -----------------------------------------------------------------------
+    | States             | 6                                              |
+    | Transitions        | 18                                             |
+    | Inputs             | 11                                             |
+    | Outputs            | 9                                              |
+    | Clock              | sys_clk (rising_edge)                          |
+    | Reset              | reset (negative)                               |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | scl_idle                                       |
+    | Power Up State     | scl_idle                                       |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 4x1-bit ROM for signal <$mux0049>.
+WARNING:Xst:737 - Found 1-bit latch for signal <sda_out>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+WARNING:Xst:737 - Found 1-bit latch for signal <stop_scl>.
+INFO:Xst:2371 - HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+    Found 1-bit register for signal <mal>.
+    Found 1-bit register for signal <mcf>.
+    Found 1-bit register for signal <mif>.
+    Found 1-bit register for signal <srw>.
+    Found 1-bit register for signal <maas>.
+    Found 8-bit register for signal <mbdr_i2c>.
+    Found 1-bit register for signal <rxak>.
+    Found 1-bit tristate buffer for signal <sda>.
+    Found 1-bit tristate buffer for signal <scl>.
+    Found 1-bit register for signal <msta_rst>.
+    Found 7-bit comparator equal for signal <$cmp_eq0017> created at line 675.
+    Found 1-bit 4-to-1 multiplexer for signal <$mux0052>.
+    Found 1-bit xor2 for signal <$xor0041> created at line 231.
+    Found 1-bit register for signal <arb_lost>.
+    Found 1-bit register for signal <bus_busy>.
+    Found 1-bit register for signal <bus_busy_d1>.
+    Found 1-bit register for signal <detect_start>.
+    Found 1-bit register for signal <detect_stop>.
+    Found 1-bit register for signal <gen_start>.
+    Found 1-bit register for signal <gen_stop>.
+    Found 1-bit register for signal <i2c_header_en>.
+    Found 1-bit register for signal <master_sda>.
+    Found 1-bit register for signal <master_slave>.
+    Found 1-bit register for signal <msta_d1>.
+    Found 1-bit register for signal <scl_in>.
+    Found 1-bit register for signal <scl_in_d1>.
+    Found 1-bit register for signal <scl_out_reg>.
+    Found 1-bit register for signal <sda_in>.
+    Found 1-bit register for signal <sda_in_d1>.
+    Found 1-bit register for signal <sda_out_reg>.
+    Found 1-bit register for signal <sda_out_reg_d1>.
+    Found 1-bit register for signal <shift_reg_en>.
+    Found 1-bit register for signal <shift_reg_ld>.
+    Found 1-bit register for signal <slave_sda>.
+    Found 1-bit register for signal <sm_stop>.
+    Found 1-bit register for signal <stop_scl_reg>.
+    Summary:
+	inferred   2 Finite State Machine(s).
+	inferred   1 ROM(s).
+	inferred  38 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+	inferred   1 Multiplexer(s).
+	inferred   2 Tristate(s).
+Unit <i2c_control> synthesized.
+
+
+Synthesizing Unit <kcuart_tx>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd".
+Unit <kcuart_tx> synthesized.
+
+
+Synthesizing Unit <kcuart_rx>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd".
+Unit <kcuart_rx> synthesized.
+
+
+Synthesizing Unit <sck_logic>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd".
+WARNING:Xst:646 - Signal <clk_cnt<0>> is assigned but never used.
+    Found 1-bit tristate buffer for signal <sck>.
+    Found 1-bit 4-to-1 multiplexer for signal <$mux0005> created at line 190.
+    Found 1-bit 4-to-1 multiplexer for signal <$mux0006> created at line 118.
+    Found 1-bit register for signal <sck_0>.
+    Found 1-bit register for signal <sck_d1>.
+    Found 1-bit register for signal <sck_int>.
+    Found 1-bit register for signal <sck_int_d1>.
+    Found 1-bit register for signal <sck_out>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+	inferred   2 Multiplexer(s).
+	inferred   1 Tristate(s).
+Unit <sck_logic> synthesized.
+
+
+Synthesizing Unit <spi_control_sm>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd".
+    Found finite state machine <FSM_2> for signal <spi_state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 33                                             |
+    | Inputs             | 9                                              |
+    | Outputs            | 8                                              |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | $or0000 (positive)                             |
+    | Reset type         | asynchronous                                   |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <rcv_full>.
+    Found 1-bit register for signal <xmit_empty>.
+    Found 8-bit tristate buffer for signal <ss_n>.
+    Found 1-bit register for signal <ss_in_int>.
+    Found 1-bit register for signal <ss_in_neg>.
+    Found 1-bit register for signal <ss_in_pos>.
+    Found 8-bit register for signal <ss_n_out>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred  13 D-type flip-flop(s).
+	inferred   8 Tristate(s).
+Unit <spi_control_sm> synthesized.
+
+
+Synthesizing Unit <uart_tx>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_tx.vhd".
+Unit <uart_tx> synthesized.
+
+
+Synthesizing Unit <uart_rx>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_rx.vhd".
+Unit <uart_rx> synthesized.
+
+
+Synthesizing Unit <spi_interface>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_interface.vhd".
+Unit <spi_interface> synthesized.
+
+
+Synthesizing Unit <smartbrd>.
+    Related source file is "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/smartbrd.vhd".
+WARNING:Xst:1780 - Signal <tx_data> is never used or assigned.
+WARNING:Xst:646 - Signal <mbb> is assigned but never used.
+WARNING:Xst:646 - Signal <rcv_full> is assigned but never used.
+WARNING:Xst:653 - Signal <msta> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <men> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <start> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <cpol> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <adc_ctrl_read_strobe> is assigned but never used.
+WARNING:Xst:653 - Signal <mbdr_micro> is used but never assigned. Tied to value 00000000.
+WARNING:Xst:653 - Signal <rcv_full_reset> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <read_from_uart> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <mif> is assigned but never used.
+WARNING:Xst:653 - Signal <spien> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <xmit_empty_reset> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <safety_data> is never used or assigned.
+WARNING:Xst:653 - Signal <mal_bit_reset> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <rcv_data> is assigned but never used.
+WARNING:Xst:653 - Signal <miso_io> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <ss_in_n> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <rsta> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <ss_n> is assigned but never used.
+WARNING:Xst:646 - Signal <adc_ctrl_port_id<5>> is assigned but never used.
+WARNING:Xst:653 - Signal <madr> is used but never assigned. Tied to value 00000000.
+WARNING:Xst:1780 - Signal <tx_out> is never used or assigned.
+WARNING:Xst:653 - Signal <mif_bit_reset> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <mbdr_i2c> is assigned but never used.
+WARNING:Xst:653 - Signal <read_link_fifo> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <reset_link_fifo> is used but never assigned. Tied to value 0.
+WARNING:Xst:653 - Signal <mbcr_wr> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <xmit_data> is never used or assigned.
+WARNING:Xst:1780 - Signal <pwm_io<3:1>> is never used or assigned.
+WARNING:Xst:646 - Signal <pwm_io<0>> is assigned but never used.
+WARNING:Xst:653 - Signal <rcv_cpol> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <rxak> is assigned but never used.
+WARNING:Xst:646 - Signal <io_ctrl_read_strobe> is assigned but never used.
+WARNING:Xst:653 - Signal <spissr> is used but never assigned. Tied to value 00000000.
+WARNING:Xst:653 - Signal <mtx> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <safety_address> is never used or assigned.
+WARNING:Xst:646 - Signal <io_event_1hz> is assigned but never used.
+WARNING:Xst:646 - Signal <mosi_io> is assigned but never used.
+WARNING:Xst:653 - Signal <spitr> is used but never assigned. Tied to value 00000000.
+WARNING:Xst:646 - Signal <done> is assigned but never used.
+WARNING:Xst:653 - Signal <clkdiv> is used but never assigned. Tied to value 00.
+WARNING:Xst:1780 - Signal <ss_mask_reg> is never used or assigned.
+WARNING:Xst:1780 - Signal <safety_disable_clock> is never used or assigned.
+WARNING:Xst:646 - Signal <safety_disable_interrupts> is assigned but never used.
+WARNING:Xst:646 - Signal <pwm_duty1> is assigned but never used.
+WARNING:Xst:1780 - Signal <timer_pulse> is never used or assigned.
+WARNING:Xst:1780 - Signal <pwm_duty2> is never used or assigned.
+WARNING:Xst:1780 - Signal <pwm_duty3> is never used or assigned.
+WARNING:Xst:646 - Signal <valve_io> is assigned but never used.
+WARNING:Xst:653 - Signal <txak> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <safety_disable_outputs> is assigned but never used.
+WARNING:Xst:646 - Signal <io_ctrl_port_id<7:5>> is assigned but never used.
+WARNING:Xst:1780 - Signal <timer_count> is never used or assigned.
+WARNING:Xst:646 - Signal <msta_rst> is assigned but never used.
+WARNING:Xst:653 - Signal <cpha> is used but never assigned. Tied to value 0.
+WARNING:Xst:1780 - Signal <sys_clk> is never used or assigned.
+WARNING:Xst:1780 - Signal <tx_write> is never used or assigned.
+    Register <spi_amp_cs> equivalent to <simple_io<10>> has been removed
+    Register <spi_adc_conv> equivalent to <simple_io<11>> has been removed
+    Found 1-bit register for signal <spi_sck>.
+    Found 1-bit register for signal <spi_sdi>.
+    Found 1-bit register for signal <spi_rom_cs>.
+    Found 1-bit register for signal <spi_dac_cs>.
+    Found 1-bit register for signal <spi_amp_shdn>.
+    Found 1-bit register for signal <spi_dac_clr>.
+    Found 2-bit register for signal <simple_io<11:10>>.
+    Found 8-bit register for signal <led>.
+    Found 4-bit tristate buffer for signal <lcd_d>.
+    Found 1-bit register for signal <lcd_rs>.
+    Found 1-bit register for signal <lcd_e>.
+    Found 26-bit adder for signal <$add0000> created at line 497.
+    Found 8-bit register for signal <adc_ctrl_in_port>.
+    Found 1-bit register for signal <adc_ctrl_interrupt>.
+    Found 9-bit up counter for signal <baud_9600_count>.
+    Found 1-bit register for signal <en_9600_16_x_baud>.
+    Found 1-bit register for signal <event_1hz>.
+    Found 26-bit up counter for signal <int_count>.
+    Found 8-bit register for signal <io_ctrl_in_port>.
+    Found 1-bit register for signal <io_ctrl_interrupt>.
+    Found 26-bit register for signal <io_int_count>.
+    Found 1-bit register for signal <lcd_drive>.
+    Found 4-bit register for signal <lcd_output_data>.
+    Found 1-bit register for signal <lcd_rw_control>.
+    Found 8-bit up counter for signal <pwm_count>.
+    Summary:
+	inferred   3 Counter(s).
+	inferred  70 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   4 Tristate(s).
+Unit <smartbrd> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Adders/Subtractors                                   : 1
+ 26-bit adder                                          : 1
+# Counters                                             : 8
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 2
+ 8-bit up counter                                      : 1
+ 9-bit up counter                                      : 1
+# Registers                                            : 77
+ 1-bit register                                        : 67
+ 26-bit register                                       : 1
+ 4-bit register                                        : 1
+ 8-bit register                                        : 8
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 1
+ 7-bit comparator equal                                : 1
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 3
+# Tristates                                            : 6
+ 1-bit tristate buffer                                 : 4
+ 4-bit tristate buffer                                 : 1
+ 8-bit tristate buffer                                 : 1
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_2> for best encoding.
+Optimizing FSM <spi/spi_ctrl_sm/spi_state> on signal <spi_state[1:11]> with one-hot encoding.
+----------------------------
+ State       | Encoding
+----------------------------
+ idle        | 00000000001
+ assert_ssn1 | 00000000010
+ assert_ssn2 | 00000000100
+ unmask_sck  | 00000001000
+ xfer_bit    | 00000010000
+ assert_done | 00000100000
+ chk_start   | 00001000000
+ mask_sck    | 00010000000
+ hold_ssn1   | 00100000000
+ hold_ssn2   | 01000000000
+ negate_ssn  | 10000000000
+----------------------------
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <i2c_port/scl_state> on signal <scl_state[1:6]> with one-hot encoding.
+---------------------------
+ State         | Encoding
+---------------------------
+ scl_idle      | 000001
+ start         | 000010
+ scl_low_edge  | 000100
+ scl_low       | 001000
+ scl_high_edge | 010000
+ scl_high      | 100000
+---------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <i2c_port/state> on signal <state[1:3]> with gray encoding.
+------------------------
+ State      | Encoding
+------------------------
+ idle       | 000
+ header     | 001
+ ack_header | 011
+ rcv_data   | 010
+ ack_data   | 111
+ xmit_data  | 110
+ wait_ack   | 101
+------------------------
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\ise82.
+WARNING:Xst:1291 - FF/Latch <data_int_7> is unconnected in block <spi_rcv_shift_reg>.
+WARNING:Xst:1291 - FF/Latch <rcv_full> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_0> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_1> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_2> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_3> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_4> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_5> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_6> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <ss_n_out_7> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1290 - Hierarchical block <rcv_shift_reg> is unconnected in block <spi>.
+   It will be removed from the design.
+WARNING:Xst:1290 - Hierarchical block <xmit_shift_reg> is unconnected in block <spi>.
+   It will be removed from the design.
+WARNING:Xst:1291 - FF/Latch <mal> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mif> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <msta_rst> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mcf> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <bus_busy_d1> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <rxak> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_0> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_1> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_2> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_3> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_4> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_5> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_6> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <mbdr_i2c_7> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <srw> is unconnected in block <i2c_port>.
+WARNING:Xst:1291 - FF/Latch <xmit_empty> is unconnected in block <spi_ctrl_sm>.
+WARNING:Xst:1291 - FF/Latch <FFd3> is unconnected in block <spi_state>.
+WARNING:Xst:1291 - FF/Latch <FFd1> is unconnected in block <spi_state>.
+WARNING:Xst:1291 - FF/Latch <FFd2> is unconnected in block <spi_state>.
+WARNING:Xst:1291 - FF/Latch <FFd4> is unconnected in block <spi_state>.
+WARNING:Xst:1291 - FF/Latch <FFd11> is unconnected in block <spi_state>.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 3
+# ROMs                                                 : 1
+ 4x1-bit ROM                                           : 1
+# Counters                                             : 7
+ 26-bit up counter                                     : 1
+ 3-bit up counter                                      : 1
+ 4-bit up counter                                      : 2
+ 5-bit up counter                                      : 2
+ 9-bit up counter                                      : 1
+# Registers                                            : 261
+ Flip-Flops                                            : 261
+# Latches                                              : 2
+ 1-bit latch                                           : 2
+# Comparators                                          : 1
+ 7-bit comparator equal                                : 1
+# Multiplexers                                         : 3
+ 1-bit 4-to-1 multiplexer                              : 3
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+INFO:Xst:2261 - The FF/Latch <ss_n_out_0> in Unit <spi_control_sm> is equivalent to the following 7 FFs/Latches, which will be removed : <ss_n_out_1> <ss_n_out_2> <ss_n_out_3> <ss_n_out_4> <ss_n_out_5> <ss_n_out_6> <ss_n_out_7> 
+WARNING:Xst:1710 - FF/Latch  <rcv_full> (without init value) has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <ss_n_out_0> (without init value) has a constant value of 1 in block <spi_control_sm>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/sm_stop> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/stop_scl> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/msta_d1> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/gen_stop> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/gen_start> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/master_slave> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/stop_scl_reg> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/CLKCNT/q_int_0> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_state_FFd6> has a constant value of 1 in block <smartbrd>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_state_FFd5> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mal> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mif> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/msta_rst> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mcf> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/bus_busy_d1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/rxak> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_0> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_2> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_3> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_4> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_5> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_6> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/mbdr_i2c_7> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/srw> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/miso_pos> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/data_int_0> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/data_int_1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/data_int_2> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/data_int_3> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/data_int_4> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/data_int_5> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/data_int_6> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/miso_neg> is unconnected in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/CLKCNT/q_int_1> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/CLKCNT/q_int_2> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/CLKCNT/q_int_3> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/CLKCNT/q_int_4> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_state_FFd4> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/bus_busy> is unconnected in block <smartbrd>.
+WARNING:Xst:1426 - The value init of the FF/Latch i2c_port/sda_out hinder the constant cleaning in the block smartbrd.
+   You should achieve better results by setting this init to 1.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/scl_out_reg> (without init value) has a constant value of 1 in block <smartbrd>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_state_FFd3> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_state_FFd1> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_state_FFd2> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/master_sda> is unconnected in block <smartbrd>.
+WARNING:Xst:1294 - Latch <i2c_port/sda_out> is equivalent to a wire in block <smartbrd>.
+INFO:Xst:2261 - The FF/Latch <i2c_port/scl_in> in Unit <smartbrd> is equivalent to the following FF/Latch, which will be removed : <i2c_port/sda_out_reg> 
+INFO:Xst:2261 - The FF/Latch <i2c_port/scl_in_d1> in Unit <smartbrd> is equivalent to the following FF/Latch, which will be removed : <i2c_port/sda_out_reg_d1> 
+WARNING:Xst:1710 - FF/Latch  <i2c_port/BITCNT/q_int_0> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/BITCNT/q_int_1> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/BITCNT/q_int_2> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/BITCNT/q_int_3> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_in> (without init value) has a constant value of 1 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/scl_in_d1> (without init value) has a constant value of 1 in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/arb_lost> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <CLK_DIVDR/q_int_2> is unconnected in block <sck_logic>.
+WARNING:Xst:1291 - FF/Latch <CLK_DIVDR/q_int_3> is unconnected in block <sck_logic>.
+WARNING:Xst:1291 - FF/Latch <CLK_DIVDR/q_int_4> is unconnected in block <sck_logic>.
+WARNING:Xst:1293 - FF/Latch  <spi_state_FFd9> has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <spi_state_FFd8> has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <spi_state_FFd10> has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <spi_state_FFd11> has a constant value of 1 in block <spi_control_sm>.
+WARNING:Xst:1710 - FF/Latch  <xmit_empty> (without init value) has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <spi_state_FFd7> has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1291 - FF/Latch <spi_state_FFd3> is unconnected in block <spi_control_sm>.
+WARNING:Xst:1291 - FF/Latch <spi_state_FFd1> is unconnected in block <spi_control_sm>.
+WARNING:Xst:1291 - FF/Latch <spi_state_FFd2> is unconnected in block <spi_control_sm>.
+WARNING:Xst:1293 - FF/Latch  <spi_state_FFd6> has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1293 - FF/Latch  <spi_state_FFd4> has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1896 - Due to other FF/Latch trimming, FF/Latch  <spi_state_FFd5> has a constant value of 0 in block <spi_control_sm>.
+WARNING:Xst:1291 - FF/Latch <BIT_CNTR/q_int_0> is unconnected in block <spi_control_sm>.
+WARNING:Xst:1291 - FF/Latch <BIT_CNTR/q_int_1> is unconnected in block <spi_control_sm>.
+WARNING:Xst:1291 - FF/Latch <BIT_CNTR/q_int_2> is unconnected in block <spi_control_sm>.
+WARNING:Xst:1291 - FF/Latch <BIT_CNTR/q_int_3> is unconnected in block <spi_control_sm>.
+WARNING:Xst:1293 - FF/Latch  <i2c_port/state_FFd3> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1293 - FF/Latch  <i2c_port/state_FFd1> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1293 - FF/Latch  <i2c_port/state_FFd2> has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/shift_reg_en> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/maas> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/shift_reg_ld> (without init value) has a constant value of 0 in block <smartbrd>.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch  <i2c_port/slave_sda> (without init value) has a constant value of 1 in block <smartbrd>.
+WARNING:Xst:1710 - FF/Latch  <i2c_port/sda_in> (without init value) has a constant value of 1 in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/rcv_bitcnt_int_0> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/rcv_bitcnt_int_1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/rcv_shift_reg/rcv_bitcnt_int_2> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/SCK_GEN/sck_0> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/SCK_GEN/sck_out> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/SCK_GEN/sck_d1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/SCK_GEN/sck_int_d1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/SCK_GEN/sck_int> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/SCK_GEN/CLK_DIVDR/q_int_0> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/SCK_GEN/CLK_DIVDR/q_int_1> is unconnected in block <smartbrd>.
+WARNING:Xst:2041 - Unit spi_xmit_shift_reg: 1 internal tristate is replaced by logic (pull-up yes): mosi.
+
+Optimizing unit <smartbrd> ...
+
+Optimizing unit <bbfifo_16x8> ...
+
+Optimizing unit <kcuart_rx> ...
+
+Optimizing unit <uP> ...
+
+Optimizing unit <kcuart_tx> ...
+
+Optimizing unit <SHIFT8> ...
+
+Optimizing unit <spi_xmit_shift_reg> ...
+
+Mapping all equations...
+WARNING:Xst:1291 - FF/Latch <spi/spi_ctrl_sm/ss_in_neg> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/spi_ctrl_sm/ss_in_pos> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/spi_ctrl_sm/ss_in_int> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_0> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_2> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_3> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_4> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_5> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_6> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <i2c_port/I2CDATA_REG/data_int_7> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_0> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_1> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_2> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_3> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_4> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_5> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_6> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/data_int_7> is unconnected in block <smartbrd>.
+WARNING:Xst:1291 - FF/Latch <spi/xmit_shift_reg/mosi_int> is unconnected in block <smartbrd>.
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block smartbrd, actual ratio is 6.
+INFO:Xst:2260 - The FF/Latch <io_ctrl_processor/reset_flop1> in Unit <smartbrd> is equivalent to the following FF/Latch : <adc_ctrl_processor/reset_flop1> 
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 280
+ Flip-Flops                                            : 280
+
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : smartbrd.ngr
+Top Level Output File Name         : smartbrd
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 44
+
+Cell Usage :
+# BELS                             : 645
+#      GND                         : 1
+#      INV                         : 11
+#      LUT1                        : 37
+#      LUT2                        : 24
+#      LUT2_D                      : 3
+#      LUT3                        : 146
+#      LUT4                        : 134
+#      MULT_AND                    : 3
+#      MUXCY                       : 130
+#      MUXF5                       : 32
+#      MUXF6                       : 1
+#      VCC                         : 1
+#      XORCY                       : 122
+# FlipFlops/Latches                : 280
+#      FD                          : 52
+#      FDE                         : 54
+#      FDR                         : 113
+#      FDRE                        : 33
+#      FDRS                        : 2
+#      FDRSE                       : 20
+#      FDS                         : 6
+# RAMS                             : 54
+#      RAM16X1D                    : 16
+#      RAM32X1S                    : 20
+#      RAM64X1S                    : 16
+#      RAMB16_S18                  : 2
+# Shift Registers                  : 44
+#      SRL16E                      : 44
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 43
+#      IBUF                        : 11
+#      IOBUF                       : 4
+#      OBUF                        : 28
+# Logical                          : 1
+#      NAND2B1                     : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     287  out of   4656     6%  
+ Number of Slice Flip Flops:           280  out of   9312     3%  
+ Number of 4 input LUTs:               535  out of   9312     5%  
+    Number used as logic:              355
+    Number used as Shift registers:     44
+    Number used as RAMs:               136
+ Number of IOs:                         44
+ Number of bonded IOBs:                 44  out of    232    18%  
+ Number of BRAMs:                        2  out of     20    10%  
+ Number of GCLKs:                        1  out of     24     4%  
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 376   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 9.776ns (Maximum Frequency: 102.291MHz)
+   Minimum input arrival time before clock: 4.590ns
+   Maximum output required time after clock: 6.536ns
+   Maximum combinational path delay: 5.367ns
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 9.776ns (frequency: 102.291MHz)
+  Total number of paths / destination ports: 4416 / 987
+-------------------------------------------------------------------------
+Delay:               9.776ns (Levels of Logic = 3)
+  Source:            adc_ctrl_processor/reg_loop[1].register_bit (RAM)
+  Destination:       adc_ctrl_in_port_6 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: adc_ctrl_processor/reg_loop[1].register_bit to adc_ctrl_in_port_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAM16X1D:WCLK->DPO    1   1.901   0.836  adc_ctrl_processor/reg_loop[1].register_bit (adc_ctrl_processor/sy<1>)
+     LUT3:I2->O           80   0.704   2.303  adc_ctrl_processor/reg_loop[1].operand_select_mux (adc_ctrl_port_id<1>)
+     LUT2:I0->O            2   0.704   0.912  _mux0012<7>29 (_mux0012<7>_map26)
+     LUT4:I2->O            1   0.704   0.801  _mux0012<7>34 (_mux0012<7>_map27)
+     FDS:S                     0.911          adc_ctrl_in_port_7
+    ----------------------------------------
+    Total                      9.776ns (4.924ns logic, 4.852ns route)
+                                       (50.4% logic, 49.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 39 / 20
+-------------------------------------------------------------------------
+Offset:              4.590ns (Levels of Logic = 2)
+  Source:            switch<2> (PAD)
+  Destination:       adc_ctrl_in_port_6 (FF)
+  Destination Clock: clk rising
+
+  Data Path: switch<2> to adc_ctrl_in_port_6
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.956  switch_2_IBUF (switch_2_IBUF)
+     LUT4:I1->O            1   0.704   0.801  _mux0012<6>34 (_mux0012<6>_map43)
+     FDS:S                     0.911          adc_ctrl_in_port_6
+    ----------------------------------------
+    Total                      4.590ns (2.833ns logic, 1.757ns route)
+                                       (61.7% logic, 38.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 36 / 27
+-------------------------------------------------------------------------
+Offset:              6.536ns (Levels of Logic = 2)
+  Source:            lcd_drive (FF)
+  Destination:       lcd_d<7> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: lcd_drive to lcd_d<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              2   0.591   1.052  lcd_drive (lcd_drive)
+     LUT2:I0->O            4   0.704   0.917  _and0001_inv1 (_and0001_inv)
+     IOBUF:T->IO               3.272          lcd_d_5_IOBUF (lcd_d<5>)
+    ----------------------------------------
+    Total                      6.536ns (4.567ns logic, 1.969ns route)
+                                       (69.9% logic, 30.1% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               5.367ns (Levels of Logic = 2)
+  Source:            spi_amp_sdo (PAD)
+  Destination:       simple_io<9> (PAD)
+
+  Data Path: spi_amp_sdo to simple_io<9>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.877  spi_amp_sdo_IBUF (spi_amp_sdo_IBUF)
+     OBUF:I->O                 3.272          simple_io_9_OBUF (simple_io<9>)
+    ----------------------------------------
+    Total                      5.367ns (4.490ns logic, 0.877ns route)
+                                       (83.7% logic, 16.3% route)
+
+=========================================================================
+CPU : 53.28 / 56.25 s | Elapsed : 54.00 / 57.00 s
+ 
+--> 
+
+Total memory usage is 182800 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  535 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
+

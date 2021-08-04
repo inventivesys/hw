@@ -1,0 +1,43 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 30 Sep 1995    |
+-- +---------------------------+
+
+library ieee;
+--library vfp;
+
+package bus_class is  
+  use ieee.std_logic_1164.all;
+--  use vfp.standard_types.all;
+
+-- type vfp_ulogic_array_2D is array (integer range <>, integer range <>) of vfp_ulogic;
+
+type ulogic_8_vector is array (integer range <>) of std_ulogic_vector(7 downto 0);
+type ulogic_16_vector is array (integer range <>) of std_ulogic_vector(15 downto 0); 
+type ulogic_21_vector is array (integer range <>) of std_ulogic_vector(20 downto 0); 
+type ulogic_32_vector is array (integer range <>) of std_ulogic_vector(31 downto 0);
+type ulogic_2_vector is array (integer range <>) of std_ulogic_vector(1 downto 0);
+type ulogic_3_vector is array (integer range <>) of std_ulogic_vector(2 downto 0);
+type ulogic_4_vector is array (integer range <>) of std_ulogic_vector(3 downto 0);
+type ulogic_5_vector is array (integer range <>) of std_ulogic_vector(4 downto 0);
+type ulogic_6_vector is array (integer range <>) of std_ulogic_vector(5 downto 0);
+type ulogic_7_vector is array (integer range <>) of std_ulogic_vector(6 downto 0);
+
+type nibble is array (3 downto 0)  of std_ulogic; -- 30.09.95
+type byte   is array (7 downto 0)  of std_ulogic; -- 30.09.95
+type word   is array (15 downto 0) of std_ulogic; -- 30.09.95
+type dword  is array (31 downto 0) of std_ulogic; -- 30.09.95
+type qword  is array (63 downto 0) of std_ulogic; -- 30.09.95
+
+type byte_vector is array (integer range <>) of byte;
+type word_vector is array (integer range <>) of word;
+type dword_vector is array (integer range <>) of dword;
+type qword_vector is array (integer range <>) of qword;
+
+-- function to_std_ulogic_vector (a: word) return std_ulogic_vector;                
+
+end bus_class;
+
+
+

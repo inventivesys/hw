@@ -1,0 +1,52 @@
+//! **************************************************************************
+// Written by: Map I.31 on Thu Feb 22 16:28:25 2007
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "spi_dac_clr" LOCATE = SITE "P8" LEVEL 1;
+COMP "spi_sdo" LOCATE = SITE "N10" LEVEL 1;
+COMP "strataflash_ce" LOCATE = SITE "D16" LEVEL 1;
+COMP "btn_south" LOCATE = SITE "K17" LEVEL 1;
+COMP "strataflash_oe" LOCATE = SITE "C18" LEVEL 1;
+COMP "strataflash_we" LOCATE = SITE "D17" LEVEL 1;
+COMP "spi_amp_sdo" LOCATE = SITE "E18" LEVEL 1;
+COMP "led<0>" LOCATE = SITE "F12" LEVEL 1;
+COMP "led<1>" LOCATE = SITE "E12" LEVEL 1;
+COMP "led<2>" LOCATE = SITE "E11" LEVEL 1;
+COMP "led<3>" LOCATE = SITE "F11" LEVEL 1;
+COMP "led<4>" LOCATE = SITE "C11" LEVEL 1;
+COMP "led<5>" LOCATE = SITE "D11" LEVEL 1;
+COMP "led<6>" LOCATE = SITE "E9" LEVEL 1;
+COMP "led<7>" LOCATE = SITE "F9" LEVEL 1;
+COMP "spi_sdi" LOCATE = SITE "T4" LEVEL 1;
+COMP "spi_sck" LOCATE = SITE "U16" LEVEL 1;
+COMP "btn_east" LOCATE = SITE "H13" LEVEL 1;
+COMP "spi_adc_conv" LOCATE = SITE "P11" LEVEL 1;
+COMP "switch<0>" LOCATE = SITE "L13" LEVEL 1;
+COMP "switch<1>" LOCATE = SITE "L14" LEVEL 1;
+COMP "switch<2>" LOCATE = SITE "H18" LEVEL 1;
+COMP "switch<3>" LOCATE = SITE "N17" LEVEL 1;
+COMP "btn_west" LOCATE = SITE "D18" LEVEL 1;
+COMP "spi_amp_cs" LOCATE = SITE "N7" LEVEL 1;
+COMP "lcd_rw" LOCATE = SITE "L17" LEVEL 1;
+COMP "simple_io<10>" LOCATE = SITE "C7" LEVEL 1;
+COMP "simple_io<11>" LOCATE = SITE "F8" LEVEL 1;
+COMP "simple_io<12>" LOCATE = SITE "E8" LEVEL 1;
+COMP "spi_rom_cs" LOCATE = SITE "U3" LEVEL 1;
+COMP "spi_dac_cs" LOCATE = SITE "N8" LEVEL 1;
+COMP "clk" LOCATE = SITE "C9" LEVEL 1;
+COMP "simple_io<9>" LOCATE = SITE "D7" LEVEL 1;
+COMP "rxd" LOCATE = SITE "R7" LEVEL 1;
+COMP "lcd_e" LOCATE = SITE "M18" LEVEL 1;
+COMP "txd" LOCATE = SITE "M14" LEVEL 1;
+COMP "platformflash_oe" LOCATE = SITE "T3" LEVEL 1;
+COMP "lcd_d<4>" LOCATE = SITE "R15" LEVEL 1;
+COMP "lcd_d<5>" LOCATE = SITE "R16" LEVEL 1;
+COMP "lcd_d<6>" LOCATE = SITE "P17" LEVEL 1;
+COMP "lcd_d<7>" LOCATE = SITE "M15" LEVEL 1;
+COMP "spi_amp_shdn" LOCATE = SITE "P7" LEVEL 1;
+COMP "lcd_rs" LOCATE = SITE "L18" LEVEL 1;
+COMP "btn_north" LOCATE = SITE "V4" LEVEL 1;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH 50%;
+SCHEMATIC END;

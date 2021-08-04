@@ -1,0 +1,39 @@
+-- +-----------------------------+
+-- |    Copyright 1996 DOULOS    |
+-- |      Library : generic      |
+-- |     opened: 12 Jun 1995     |
+-- +-----------------------------+
+
+library ieee;
+
+package std_constants is
+
+use ieee.std_logic_1164.all;
+
+constant x00: std_ulogic_vector(7 downto 0) := "00000000"; 
+constant xFF: std_ulogic_vector(7 downto 0) := "11111111"; 
+constant xZZ: std_ulogic_vector(7 downto 0) := "ZZZZZZZZ"; 
+constant xXX: std_ulogic_vector(7 downto 0) := "XXXXXXXX"; 
+constant x0000: std_ulogic_vector(15 downto 0) := "0000000000000000"; 
+constant xFFFF: std_ulogic_vector(15 downto 0) := "1111111111111111"; 
+constant xZZZZ: std_ulogic_vector(15 downto 0) := "ZZZZZZZZZZZZZZZZ"; 
+constant xXXXX: std_ulogic_vector(15 downto 0) := "XXXXXXXXXXXXXXXX"; 
+constant x00000000: std_ulogic_vector(31 downto 0) := "00000000000000000000000000000000"; 
+constant xFFFFFFFF: std_ulogic_vector(31 downto 0) := "11111111111111111111111111111111"; 
+constant xZZZZZZZZ: std_ulogic_vector(31 downto 0) := "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"; 
+constant xXXXXXXXX: std_ulogic_vector(31 downto 0) := "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; 
+
+constant B0: std_ulogic_vector(7 downto 0) := "00000000"; 
+constant B1: std_ulogic_vector(7 downto 0) := "11111111"; 
+constant BZ: std_ulogic_vector(7 downto 0) := "ZZZZZZZZ"; 
+constant BX: std_ulogic_vector(7 downto 0) := "XXXXXXXX"; 
+constant W0: std_ulogic_vector(15 downto 0) := "0000000000000000"; 
+constant W1: std_ulogic_vector(15 downto 0) := "1111111111111111"; 
+constant WZ: std_ulogic_vector(15 downto 0) := "ZZZZZZZZZZZZZZZZ"; 
+constant WX: std_ulogic_vector(15 downto 0) := "XXXXXXXXXXXXXXXX"; 
+constant D0: std_ulogic_vector(31 downto 0) := "00000000000000000000000000000000"; 
+constant D1: std_ulogic_vector(31 downto 0) := "11111111111111111111111111111111"; 
+constant DZ: std_ulogic_vector(31 downto 0) := "ZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZZ"; 
+constant DX: std_ulogic_vector(31 downto 0) := "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"; 
+
+end std_constants;

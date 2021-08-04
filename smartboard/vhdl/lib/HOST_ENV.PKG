@@ -1,0 +1,16 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 25 Nov 1995    |
+-- +---------------------------+
+
+-- Synthesis script: read -f vhdl host_env.pkg
+
+-- library vfp;
+
+package host_environment_parameters is
+
+  constant max_integer : integer:= 5;
+  constant num_bits_in_integer : integer := 32;
+
+end host_environment_parameters;

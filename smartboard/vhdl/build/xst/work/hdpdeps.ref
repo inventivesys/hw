@@ -1,0 +1,162 @@
+V3 111
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd 2007/01/19.15:50:10 I.31
+EN work/bbfifo_16x8 1172190428 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/bbfifo_16x8/low_level_definition 1172190429 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd \
+      EN work/bbfifo_16x8 1172190428 CP string CP label      CP SRL16E         CP FDRE \
+      CP LUT4           CP MUXCY          CP XORCY          CP FDR            CP LUT3
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/smartbrd.vhd 2007/02/22.16:26:27 I.31
+EN work/smartbrd 1172190446        FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/smartbrd.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814
+AR work/smartbrd/Behavioral 1172190447 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/smartbrd.vhd \
+      EN work/smartbrd 1172190446 CP uP    CP adc_ctrl       CP bbfifo_16x8 \
+      CP io_ctrl        CP uart_tx        CP uart_rx        CP spi_interface \
+      CP i2c_Control
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd 2000/11/01.14:34:12 I.31
+EN work/sck_logic 1172190418       FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/sck_logic/DEFINITION 1172190419 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd \
+      EN work/sck_logic 1172190418 CP upcnt5
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd 2002/12/12.10:18:18 I.31
+EN work/spi_control_sm 1172190420 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/spi_control_sm/DEFINITION 1172190421 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd \
+      EN work/spi_control_sm 1172190420 CP upcnt4
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD 2007/01/22.10:00:12 I.31
+EN work/io_ctrl 1172190436         FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/io_ctrl/low_level_definition 1172190437 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD EN work/io_ctrl 1172190436 \
+      CP RAMB16_S18
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_rx.vhd 2006/01/04.08:43:04 I.31
+EN work/uart_rx 1172190440         FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_rx.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/uart_rx/macro_level_definition 1172190441 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_rx.vhd EN work/uart_rx 1172190440 \
+      CP kcuart_rx      CP bbfifo_16x8
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/i2c_control.vhd 1999/07/08.11:40:42 I.31
+EN work/i2c_Control 1172190444 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/i2c_control.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/i2c_control/behave 1172190445 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/i2c_control.vhd \
+      EN work/i2c_Control 1172190444 PB ieee/std_logic_1164 1147274808 CP upcnt5 \
+      CP SHIFT8         CP upcnt4
+FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/i2c.vhd 2006/01/18.12:29:30 I.31
+EN work/I2C 1169490211             FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/i2c.vhd \
+      PB ieee/std_logic_1164 1147274808
+AR work/I2C/structural 1169490212  FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/i2c.vhd \
+      EN work/I2C 1169490211 CP i2c_Control CP BusInterface
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/shift.vhd 1999/07/08.11:41:02 I.31
+EN work/SHIFT8 1172190416          FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/shift.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/SHIFT8/DEFINITION 1172190417 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/shift.vhd EN work/SHIFT8 1172190416
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd 2007/01/22.15:03:00 I.31
+EN work/uP 1172190432              FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/uP/low_level_definition 1172190433 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd EN work/uP 1172190432 \
+      CP LUT1           CP FDR            CP FDS            CP LUT4           CP FD \
+      CP FDE            CP LUT3           CP FDRE           CP LUT2           CP MUXCY \
+      CP XORCY          CP INV            CP string         CP label          CP FDRSE \
+      CP RAM16X1D       CP RAM64X1S       CP MUXF5          CP RAM32X1S
+FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/SHIFT8.vhd 2006/01/13.14:53:54 I.31
+AR work/SHIFT8/behaviour -1 FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/SHIFT8.vhd \
+      EN work/SHIFT8 1169490189
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/upcnt5.vhd 2007/01/22.14:30:24 I.31
+EN work/upcnt5 1172190414          FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/upcnt5.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/upcnt5/DEFINITION 1172190415 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/upcnt5.vhd EN work/upcnt5 1172190414
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_rcv_shift_reg.vhd 2002/12/12.10:23:46 I.31
+EN work/spi_rcv_shift_reg 1172190422 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_rcv_shift_reg.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/spi_rcv_shift_reg/DEFINITION 1172190423 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_rcv_shift_reg.vhd \
+      EN work/spi_rcv_shift_reg 1172190422
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_tx.vhd 2007/01/01.20:02:52 I.31
+EN work/uart_tx 1172190438         FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_tx.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/uart_tx/macro_level_definition 1172190439 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uart_tx.vhd EN work/uart_tx 1172190438 \
+      CP kcuart_tx      CP bbfifo_16x8
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd 2006/01/04.08:43:04 I.31
+EN work/kcuart_rx 1172190426       FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/kcuart_rx/low_level_definition 1172190427 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd \
+      EN work/kcuart_rx 1172190426 CP FD   CP string         CP label          CP SRL16E \
+      CP FDE            CP LUT4           CP LUT3           CP LUT2
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_xmit_shift_reg.vhd 2000/11/01.14:37:34 I.31
+EN work/spi_xmit_shift_reg 1172190424 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_xmit_shift_reg.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/spi_xmit_shift_reg/DEFINITION 1172190425 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_xmit_shift_reg.vhd \
+      EN work/spi_xmit_shift_reg 1172190424
+FL D:/dev/fpga/smartbrd/s3e/v10.02/src/mcu/kcpsm3.vhd 2006/01/04.08:43:04 I.31
+EN work/kcpsm3 1169495607          FL D:/dev/fpga/smartbrd/s3e/v10.02/src/mcu/kcpsm3.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/kcpsm3/low_level_definition 1169495608 \
+      FL D:/dev/fpga/smartbrd/s3e/v10.02/src/mcu/kcpsm3.vhd EN work/kcpsm3 1169495607 \
+      CP LUT1           CP FDR            CP FDS            CP LUT4           CP FD \
+      CP FDE            CP LUT3           CP FDRE           CP LUT2           CP MUXCY \
+      CP XORCY          CP INV            CP string         CP label          CP FDRSE \
+      CP RAM16X1D       CP RAM64X1S       CP MUXF5          CP RAM32X1S
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd 2007/02/05.10:27:30 I.31
+EN work/adc_ctrl 1172190434        FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/adc_ctrl/low_level_definition 1172190435 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd \
+      EN work/adc_ctrl 1172190434 CP RAMB16_S18
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/upcnt4.vhd 1999/07/08.11:41:44 I.31
+EN work/upcnt4 1172190412          FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/upcnt4.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810
+AR work/upcnt4/DEFINITION 1172190413 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/upcnt4.vhd \
+      EN work/upcnt4 1172190412
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_interface.vhd 2002/12/12.10:21:06 I.31
+EN work/spi_interface 1172190442 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_interface.vhd LB unisim \
+      PB ieee/std_logic_1164 1147274808 PH ieee/NUMERIC_STD 1147274819 \
+      PH unisim/VCOMPONENTS 1147852889
+AR work/spi_interface/SCHEMATIC 1172190443 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_interface.vhd \
+      EN work/spi_interface 1172190442 CP NAND2B1 CP sck_logic CP spi_control_sm \
+      CP spi_rcv_shift_reg CP spi_xmit_shift_reg
+FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/i2c_Control.vhd 2006/01/13.14:52:58 I.31
+AR work/i2c_Control/a0 -1  FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/i2c_Control.vhd \
+      EN work/i2c_Control 1169490191 CP SHIFT8 CP upcnt4
+FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/BusInterface.vhd 2006/01/13.14:19:12 I.31
+EN work/BusInterface 1169490193    FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/BusInterface.vhd \
+      PB ieee/std_logic_1164 1147274808
+AR work/BusInterface/structural 1169490194 \
+      FL D:/dev/fpga/smartbrd/s3e/v10.02/src/i2c/BusInterface.vhd \
+      EN work/BusInterface 1169490193
+FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd 2006/01/04.08:43:04 I.31
+EN work/kcuart_tx 1172190430       FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd \
+      PB ieee/std_logic_1164 1147274808 PB ieee/std_logic_arith 1147274810 \
+      PB ieee/STD_LOGIC_UNSIGNED 1147274814 LB unisim PH unisim/VCOMPONENTS 1147852889
+AR work/kcuart_tx/low_level_definition 1172190431 \
+      FL C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd \
+      EN work/kcuart_tx 1172190430 CP LUT4 CP MUXF5          CP MUXF6          CP FDRS \
+      CP string         CP label          CP FDRE           CP LUT2           CP MULT_AND \
+      CP MUXCY          CP XORCY          CP LUT3           CP FDE            CP SRL16E \
+      CP FD

@@ -1,0 +1,286 @@
+; =========================================================================================
+; === sp3 application using picoblaze
+; =========================================================================================
+             ; port definitions
+             CONSTANT dipsw_port, 04
+             CONSTANT led_port, 02             ;bit0 will be data
+
+	     CONSTANT SEGS_port, 08
+	     CONSTANT AN_port, 10
+             CONSTANT pattern_10101010, AA
+
+
+	     ; UART ports
+	     CONSTANT tx_half_full, 01                   ; Transmitter     half full - bit0
+	     CONSTANT tx_full, 02                   ; FIFO               full - bit1
+	     CONSTANT rx_half_full, 04                   ; Receiver        half full - bit2
+	     CONSTANT rx_full, 08                   ; FIFO               full - bit3
+	     CONSTANT rx_data_present, 10                 ; data present - bit4
+
+             ; RS232 UART Port
+	     CONSTANT UART_status_port, 01                 ; UART status IN
+	     CONSTANT UART_read_port, 02                 ; UART Rx data IN
+	     CONSTANT UART_write_port, 01                 ; UART Tx data OUT
+             ; 
+; ========================================================================================
+; scratch pad memory locations
+	    CONSTANT temp,   05                   ; used to save other values
+            CONSTANT msgid0, 01
+
+            
+; 
+; 
+; UART character strings will be stored in scratch pad memory ending in carriage RET.
+; A string can be up to 16 characters with the start location defined by this .
+; 
+	    CONSTANT string_start, 10
+
+
+; =========================================================================================
+; 
+; Special Register usage
+; 
+             NAMEREG sA, interrupt_counter
+	     NAMEREG sF, mode_reg                 ; operating mode of processor
+	     NAMEREG sE, uart_pointer             ; used to store pointer  string
+; 
+; Two registers to form a 16-bit counter used to count
+; interrupt pulses generated at 1us intervals.
+; 
+ 	     NAMEREG sD, int_counter_lsb          ; lower 8-bits
+ 	     NAMEREG sC, int_counter_msb          ; upper 8-bits
+	     NAMEREG s8, uart_data                ; used to pass data to and from UART
+
+; =========================================================================================
+
+
+
+
+;==========================================================================================
+	     load s1, 0e    
+             OUTPUT s1,AN_port
+	     load s1, 02    
+             OUTPUT s1, SEGS_port
+
+
+ main_loop:  
+
+	     call send_test
+             call delay250ms
+	     call read_from_UART
+
+             JUMP main_loop
+             ;
+
+
+
+; ==========================================================================================
+; 
+send_msg: 
+
+             LOAD      uart_data, character_0
+             CALL      send_to_UART
+             LOAD      uart_data, character_1
+             CALL      send_to_UART
+             LOAD      uart_data, character_2
+             CALL      send_to_UART
+             LOAD      uart_data, character_3
+             CALL      send_to_UART
+             LOAD      uart_data, character_4
+             CALL      send_to_UART
+             LOAD      uart_data, character_5
+             CALL      send_to_UART
+             LOAD      uart_data, character_6
+             CALL      send_to_UART
+             LOAD      uart_data, character_7
+             CALL      send_to_UART
+             LOAD      uart_data, character_8
+             CALL      send_to_UART
+             LOAD      uart_data, character_9
+             CALL      send_to_UART
+             RETURN    
+send_data: 
+             LOAD      uart_data, 01
+             CALL      send_to_UART
+             LOAD      uart_data, 02
+             CALL      send_to_UART
+             LOAD      uart_data, int_counter_lsb
+             CALL      send_to_UART
+             LOAD      uart_data, int_counter_msb
+             CALL      send_to_UART
+             RETURN 
+
+send_test: 
+             LOAD      uart_data, 6D
+             CALL      send_to_UART
+             LOAD      uart_data, 6E
+             CALL      send_to_UART
+             LOAD      uart_data, 6F
+             CALL      send_to_UART
+             RETURN 
+; ==========================================================================================
+; 				UART routines
+
+read_from_UART:                                   
+ 
+             INPUT     s0, UART_status_port 
+             TEST      s0, rx_data_present
+             JUMP      Z, read_from_uart_end
+             INPUT     s1, UART_read_port  
+             LOAD      uart_data, s1
+read_from_uart_end: 
+             RETURN 
+
+send_to_UART: 
+ 
+             INPUT     s0, UART_status_port   
+             TEST      s0, tx_full
+             JUMP      NZ, send_to_UART
+             LOAD      s0, uart_data
+             OUTPUT    s0, UART_write_port
+             RETURN  
+
+; ==========================================================================================
+; Transmit ASCII string to UART
+; 
+; An ASCII string must be provided in scratch pad memory commencing at the
+; location specified by a  named 'string_start'. The string must
+; end with a carriage return and LF.
+; 
+; Registers used s1 and 'uart_data'.
+; s0 is then used in subroutine 'send_to_UART'
+; 
+transmit_string: 
+             LOAD      s1, string_start    ; locate start of string
+next_char_tx:       
+	     FETCH     uart_data, ( s1 )   ; read character from memory
+             CALL      send_to_UART        ; transmit character
+             COMPARE   uart_data, character_LF; test for last character
+             RETURN    Z
+             ADD       s1, 01              ; move to next character
+             JUMP      next_char_tx
+
+; ==========================================================================================
+delay1us:                                         ; 1us delay loop - assumes 50MHz clock
+             LOAD      s0, 12              ; need to check this delay
+delay1us1:   SUB       s0, 01
+             JUMP      NZ, delay1us1
+             RETURN 
+; ==========================================================================================
+delay16ms:                                        ; approx. 16ms delay loop - assumes 50MHz clock
+             LOAD      s2, 50             ; 80 decimal
+delay16ms0:  LOAD      s1, C8             ; 200 decimal  (need to check this delay)
+delay16ms1:  CALL      delay1us
+             SUB       s1, 01
+             JUMP      NZ, delay16ms1
+             SUB       s2, 01
+             JUMP      NZ, delay16ms0
+             RETURN  
+; ==========================================================================================
+delay250ms:                                       ; approx. 250ms delay loop - assumes 50MHz clock
+             LOAD      s3, 16              ; need to check this delay
+delay250_1:  CALL      delay16ms
+             SUB       s3, 01
+             JUMP      NZ, delay250_1
+             RETURN
+
+
+;=========================================================================================== 
+             ADDRESS 3B0
+int_routine: ADD interrupt_counter, 01              ;increment counter
+                                         
+
+ 
+
+          
+             RETURNI ENABLE
+;===========================================================================================
+             ; 
+             ADDRESS 3FF                            ;set interrupt vector
+             JUMP int_routine
+
+
+; 
+; 
+; Useful constants
+; 
+; 
+; ASCII table
+; 
+CONSTANT character_a, 61
+CONSTANT character_b, 62
+CONSTANT character_c, 63
+CONSTANT character_d, 64
+CONSTANT character_e, 65
+CONSTANT character_f, 66
+CONSTANT character_g, 67
+CONSTANT character_h, 68
+CONSTANT character_i, 69
+CONSTANT character_j, 6A
+CONSTANT character_k, 6B
+CONSTANT character_l, 6C
+CONSTANT character_m, 6D
+CONSTANT character_n, 6E
+CONSTANT character_o, 6F
+CONSTANT character_p, 70
+CONSTANT character_q, 71
+CONSTANT character_r, 72
+CONSTANT character_s, 73
+CONSTANT character_t, 74
+CONSTANT character_u, 75
+CONSTANT character_v, 76
+CONSTANT character_w, 77
+CONSTANT character_x, 78
+CONSTANT character_y, 79
+CONSTANT character_z, 7A
+CONSTANT character_uA, 41
+CONSTANT character_uB, 42
+CONSTANT character_uC, 43
+CONSTANT character_uD, 44
+CONSTANT character_uE, 45
+CONSTANT character_uF, 46
+CONSTANT character_uG, 47
+CONSTANT character_uH, 48
+CONSTANT character_uI, 49
+CONSTANT character_uJ, 4A
+CONSTANT character_uK, 4B
+CONSTANT character_uL, 4C
+CONSTANT character_uM, 4D
+CONSTANT character_uN, 4E
+CONSTANT character_uO, 4F
+CONSTANT character_uP, 50
+CONSTANT character_uQ, 51
+CONSTANT character_uR, 52
+CONSTANT character_uS, 53
+CONSTANT character_uT, 54
+CONSTANT character_uU, 55
+CONSTANT character_uV, 56
+CONSTANT character_uW, 57
+CONSTANT character_uX, 58
+CONSTANT character_uY, 59
+CONSTANT character_uZ, 5A
+CONSTANT character_0, 30
+CONSTANT character_1, 31
+CONSTANT character_2, 32
+CONSTANT character_3, 33
+CONSTANT character_4, 34
+CONSTANT character_5, 35
+CONSTANT character_6, 36
+CONSTANT character_7, 37
+CONSTANT character_8, 38
+CONSTANT character_9, 39
+CONSTANT character_esc, 1B                 ; esc character
+CONSTANT character_comma, 2C
+CONSTANT character_dash, 2D
+CONSTANT character_colon, 3A
+CONSTANT character_semi_colon, 3B
+CONSTANT character_less_than, 3C
+CONSTANT character_greater_than, 3E
+CONSTANT character_equals, 3D
+CONSTANT character_space, 20
+CONSTANT character_CR, 0D                 ; carriage RET
+CONSTANT character_LF, 0A                 ; line feed
+CONSTANT character_question, 3F                 ; '?'
+CONSTANT character_dollar, 24
+CONSTANT character_BS, 08                 ; Back Space command character
+; 

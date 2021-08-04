@@ -1,0 +1,1643 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 271: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1182: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 434: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 465: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 588: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 596: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 363: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 405: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 507: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 579: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 664: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1091: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1118: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1202: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1251: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd&quot; line 237: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd&quot; line 270: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd&quot; line 318: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd&quot; line 254: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 314: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 353: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 385: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 395: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 414: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 424: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 450: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 475: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 536: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 569: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 776: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 853: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 868: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 919: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 938: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1226: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1283: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1293: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1309: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1397: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1430: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd&quot; line 138: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd&quot; line 219: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd&quot; line 133: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd&quot; line 281: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd&quot; line 300: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_tx.vhd&quot; line 354: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/kcuart_rx.vhd&quot; line 236: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 810: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 1350: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/uP.vhd&quot; line 888: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_00&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_01&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_02&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_03&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_04&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_05&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_06&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_07&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_08&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_09&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_0A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_0B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_0C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_0D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_0E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_0F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_10&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_11&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_12&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_13&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_14&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_15&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_16&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_17&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_18&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_19&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_1A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_1B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_1C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_1D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_1E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_1F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_20&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_21&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_22&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_23&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_24&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_25&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_26&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_27&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_28&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_29&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_2A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_2B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_2C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_2D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_2E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_2F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_30&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_31&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_32&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_33&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_34&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_35&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_36&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_37&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_38&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_39&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_3A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_3B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_3C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_3D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_3E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INIT_3F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_00&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_01&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_02&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_03&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_04&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_05&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_06&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/adc_ctrl.vhd&quot; line 182: attribute on instance &lt;INITP_07&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_00&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_01&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_02&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_03&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_04&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_05&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_06&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_07&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_08&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_09&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_0A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_0B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_0C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_0D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_0E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_0F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_10&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_11&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_12&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_13&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_14&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_15&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_16&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_17&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_18&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_19&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_1A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_1B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_1C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_1D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_1E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_1F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_20&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_21&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_22&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_23&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_24&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_25&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_26&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_27&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_28&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_29&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_2A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_2B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_2C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_2D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_2E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_2F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_30&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_31&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_32&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_33&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_34&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_35&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_36&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_37&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_38&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_39&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_3A&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_3B&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_3C&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_3D&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_3E&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INIT_3F&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_00&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_01&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_02&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_03&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_04&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_05&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_06&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/app/IO_CTRL.VHD&quot; line 182: attribute on instance &lt;INITP_07&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="0" delta="unknown" ><arg fmt="%s" index="1">&quot;C:/fpgaSmartbrd/v10.02_013007/v10.02/src/mcu/bbfifo_16x8.vhd&quot; line 104: attribute on instance &lt;INIT&gt; overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+</arg></msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">toggle_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">reset_flop1</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">reset_flop2</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">int_capture_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">int_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">ack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shadow_carry_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shadow_zero_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">int_enable_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">flag_write_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">zero_flag_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">carry_flag_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[0].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[1].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[2].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[3].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[4].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[5].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[6].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[7].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[8].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pc_loop[9].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">register_write_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">memory_write_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[0].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[1].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[2].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[3].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[4].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[5].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[6].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">store_loop[7].store_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[0].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[1].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[2].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[3].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[4].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[5].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[6].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">logical_loop[7].logical_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pipeline_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[0].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[1].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[2].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[3].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[4].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[5].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[6].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">shift_loop[7].shift_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[0].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[1].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[2].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[3].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[4].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[5].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[6].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1961" delta="unknown" >The length of the hex value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[7].msb_arith.arith_carry_out_lut</arg> should be <arg fmt="%d" index="3">2</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[7].msb_arith.arith_carry_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">arith_loop[7].arith_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">sel_group_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">write_strobe_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">read_strobe_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[0].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[1].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[2].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[3].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[4].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[5].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[6].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[7].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[8].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_ram_loop[9].stack_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_count_loop[0].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_count_loop[1].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_count_loop[2].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_count_loop[3].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stack_count_loop[4].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1961" delta="unknown" >The length of the hex value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">ram_1024_x_18</arg> should be <arg fmt="%d" index="3">18</arg> bits long. The current value set is <arg fmt="%d" index="4">20</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1961" delta="unknown" >The length of the hex value for the attribute <arg fmt="%s" index="1">SRVAL</arg> on instance <arg fmt="%s" index="2">ram_1024_x_18</arg> should be <arg fmt="%d" index="3">18</arg> bits long. The current value set is <arg fmt="%d" index="4">20</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">count_width_loop[0].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">count_width_loop[1].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">count_width_loop[2].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">count_width_loop[3].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">dp_flop</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1961" delta="unknown" >The length of the hex value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">ram_1024_x_18</arg> should be <arg fmt="%d" index="3">18</arg> bits long. The current value set is <arg fmt="%d" index="4">20</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1961" delta="unknown" >The length of the hex value for the attribute <arg fmt="%s" index="1">SRVAL</arg> on instance <arg fmt="%s" index="2">ram_1024_x_18</arg> should be <arg fmt="%d" index="3">18</arg> bits long. The current value set is <arg fmt="%d" index="4">20</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">pipeline_serial</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">count_width_loop[0].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">count_width_loop[1].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">count_width_loop[2].register_bit</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">Tx_start_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">Tx_run_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">hot_state_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">Tx_bit_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">Tx_stop_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">Tx_complete_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">sync_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">stop_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[0].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[1].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[2].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[3].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[4].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[5].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[6].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">data_loop[7].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">start_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">edge_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">purge_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[0].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[1].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[2].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[3].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[4].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[5].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[6].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[7].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">valid_loop[8].data_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="1963" delta="unknown" >The length of the binary value for the attribute <arg fmt="%s" index="1">INIT</arg> on instance <arg fmt="%s" index="2">strobe_reg</arg> should be <arg fmt="%d" index="3">1</arg> bits long. The current value set is <arg fmt="%d" index="4">4</arg> bits long.  Value has been truncated
+</msg>
+
+<msg type="warning" file="Xst" num="37" delta="unknown" >Unknown property &quot;<arg fmt="%s" index="1">fpga_dont_touch</arg>&quot;.
+</msg>
+
+<msg type="warning" file="Xst" num="752" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">88</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">data</arg>&apos; of component &apos;<arg fmt="%s" index="4">upcnt5</arg>&apos; is tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="752" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">88</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">load</arg>&apos; of component &apos;<arg fmt="%s" index="4">upcnt5</arg>&apos; is tied to default value.
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">126</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">173</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="info" file="Xst" num="1561" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/sck_logic.vhd</arg>&quot; line <arg fmt="%d" index="2">202</arg>: Mux is complete : default of case is discarded
+</msg>
+
+<msg type="warning" file="Xst" num="752" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd</arg>&quot; line <arg fmt="%d" index="2">120</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">data</arg>&apos; of component &apos;<arg fmt="%s" index="4">upcnt4</arg>&apos; is tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="752" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/spi/spi_control_sm.vhd</arg>&quot; line <arg fmt="%d" index="2">120</arg>: Unconnected input port &apos;<arg fmt="%s" index="3">load</arg>&apos; of component &apos;<arg fmt="%s" index="4">upcnt4</arg>&apos; is tied to default value.
+</msg>
+
+<msg type="warning" file="Xst" num="819" delta="unknown" >&quot;<arg fmt="%s" index="1">C:/fpgaSmartbrd/v10.02_013007/v10.02/src/i2c/v2/i2c_control.vhd</arg>&quot; line <arg fmt="%d" index="2">253</arg>: The following signals are missing in the process sensitivity list:
+<arg fmt="%s" index="3">state</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">data_int&lt;7&gt;</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="unknown" >Input &lt;<arg fmt="%s" index="1">madr&lt;0&gt;</arg>&gt; is never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">zero_sig</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">i2c_shiftout</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">bit_cnt_clr</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">sda_out</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="unknown" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="737" delta="unknown" >Found <arg fmt="%d" index="1">1</arg>-bit latch for signal &lt;<arg fmt="%s" index="2">stop_scl</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2371" delta="unknown" >HDL ADVISOR - Logic functions respectively driving the data and gate enable inputs of this latch share common terms. This situation will potentially lead to setup/hold violations and, as a result, to simulation problems. This situation may come from an incomplete case statement (all selector values are not covered). You should carefully review if it was in your intentions to describe such a latch.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">clk_cnt&lt;0&gt;</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">tx_data</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mbb</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">rcv_full</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">msta</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">men</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">start</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">cpol</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">adc_ctrl_read_strobe</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mbdr_micro</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">rcv_full_reset</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">read_from_uart</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mif</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">spien</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">xmit_empty_reset</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">safety_data</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mal_bit_reset</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">rcv_data</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">miso_io</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">ss_in_n</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">rsta</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">ss_n</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">adc_ctrl_port_id&lt;5&gt;</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">madr</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">tx_out</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mif_bit_reset</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mbdr_i2c</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">read_link_fifo</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">reset_link_fifo</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mbcr_wr</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">xmit_data</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">pwm_io&lt;3:1&gt;</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">pwm_io&lt;0&gt;</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">rcv_cpol</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">rxak</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">io_ctrl_read_strobe</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">spissr</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mtx</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">safety_address</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">io_event_1hz</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">mosi_io</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">spitr</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">00000000</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">done</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">clkdiv</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">00</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">ss_mask_reg</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">safety_disable_clock</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">safety_disable_interrupts</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">pwm_duty1</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">timer_pulse</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">pwm_duty2</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">pwm_duty3</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">valve_io</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">txak</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">safety_disable_outputs</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">io_ctrl_port_id&lt;7:5&gt;</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">timer_count</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">msta_rst</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">cpha</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">sys_clk</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1780" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">tx_write</arg>&gt; is never used or assigned.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">data_int_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_rcv_shift_reg</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">rcv_full</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="unknown" >Hierarchical block &lt;<arg fmt="%s" index="1">rcv_shift_reg</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1290" delta="unknown" >Hierarchical block &lt;<arg fmt="%s" index="1">xmit_shift_reg</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi</arg>&gt;.
+It will be removed from the design.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mal</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mif</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">msta_rst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mcf</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">bus_busy_d1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">rxak</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">mbdr_i2c_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">srw</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">i2c_port</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">xmit_empty</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_ctrl_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">FFd3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">FFd1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">FFd2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">FFd4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_state</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">FFd11</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_state</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">ss_n_out_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;ss_n_out_1&gt; &lt;ss_n_out_2&gt; &lt;ss_n_out_3&gt; &lt;ss_n_out_4&gt; &lt;ss_n_out_5&gt; &lt;ss_n_out_6&gt; &lt;ss_n_out_7&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">rcv_full</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">ss_n_out_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/sm_stop</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/stop_scl</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/msta_d1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/gen_stop</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/gen_start</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/master_slave</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/stop_scl_reg</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/CLKCNT/q_int_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_state_FFd6</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_state_FFd5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mal</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mif</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/msta_rst</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mcf</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/bus_busy_d1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/rxak</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/mbdr_i2c_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/srw</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/miso_pos</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/data_int_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/data_int_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/data_int_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/data_int_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/data_int_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/data_int_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/data_int_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/miso_neg</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/CLKCNT/q_int_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/CLKCNT/q_int_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/CLKCNT/q_int_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/CLKCNT/q_int_4</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_state_FFd4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/bus_busy</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1426" delta="unknown" >The value init of the FF/Latch <arg fmt="%s" index="1">i2c_port/sda_out</arg> hinder the constant cleaning in the block <arg fmt="%s" index="2">smartbrd</arg>.
+You should achieve better results by setting this init to <arg fmt="%i" index="3">1</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_out_reg</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_state_FFd3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_state_FFd1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_state_FFd2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/master_sda</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1294" delta="unknown" >Latch &lt;<arg fmt="%s" index="1">i2c_port/sda_out</arg>&gt; is equivalent to a wire in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/scl_in</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i2c_port/sda_out_reg&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/scl_in_d1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg>, which will be removed : <arg fmt="%s" index="4">&lt;i2c_port/sda_out_reg_d1&gt; </arg>
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/BITCNT/q_int_0</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/BITCNT/q_int_1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/BITCNT/q_int_2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/BITCNT/q_int_3</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_in</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/scl_in_d1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/arb_lost</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">CLK_DIVDR/q_int_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sck_logic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">CLK_DIVDR/q_int_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sck_logic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">CLK_DIVDR/q_int_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">sck_logic</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd9</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd8</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd10</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd11</arg>&gt; has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">xmit_empty</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd7</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi_state_FFd3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi_state_FFd1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi_state_FFd2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd6</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd4</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1896" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">spi_state_FFd5</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">BIT_CNTR/q_int_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">BIT_CNTR/q_int_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">BIT_CNTR/q_int_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">BIT_CNTR/q_int_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">spi_control_sm</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/state_FFd3</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/state_FFd1</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1293" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/state_FFd2</arg>&gt; has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/shift_reg_en</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/maas</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/shift_reg_ld</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1895" delta="unknown" >Due to other FF/Latch trimming, FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/slave_sda</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="unknown" >FF/Latch  &lt;<arg fmt="%s" index="1">i2c_port/sda_in</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/rcv_bitcnt_int_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/rcv_bitcnt_int_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/rcv_shift_reg/rcv_bitcnt_int_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/SCK_GEN/sck_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/SCK_GEN/sck_out</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/SCK_GEN/sck_d1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/SCK_GEN/sck_int_d1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/SCK_GEN/sck_int</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/SCK_GEN/CLK_DIVDR/q_int_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/SCK_GEN/CLK_DIVDR/q_int_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2041" delta="unknown" >Unit <arg fmt="%s" index="1">spi_xmit_shift_reg</arg>: <arg fmt="%d" index="2">1</arg> internal tristate is replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/spi_ctrl_sm/ss_in_neg</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/spi_ctrl_sm/ss_in_pos</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/spi_ctrl_sm/ss_in_int</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">i2c_port/I2CDATA_REG/data_int_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_0</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_1</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_2</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_3</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_4</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_5</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_6</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/data_int_7</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="1291" delta="unknown" >FF/Latch &lt;<arg fmt="%s" index="1">spi/xmit_shift_reg/mosi_int</arg>&gt; is unconnected in block &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="2260" delta="unknown" >The FF/Latch &lt;<arg fmt="%s" index="1">io_ctrl_processor/reset_flop1</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">smartbrd</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">FF/Latch</arg> : <arg fmt="%s" index="4">&lt;adc_ctrl_processor/reset_flop1&gt; </arg>
+</msg>
+
+</messages>

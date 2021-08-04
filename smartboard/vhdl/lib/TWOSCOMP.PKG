@@ -1,0 +1,17 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 25 Nov 1995    |
+-- +---------------------------+
+
+library ieee;
+
+package twos_complement_types is
+  use ieee.std_logic_1164.all;
+  
+type twos_complement is array (natural range <>) of std_ulogic;      -- 27.02.95
+
+end twos_complement_types;
+
+
+

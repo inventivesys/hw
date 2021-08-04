@@ -1,0 +1,282 @@
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/picoblaze_amp_adc_control.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/picoblaze_amp_adc_control.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf D:/dev/fpga/smartbrd/s3e/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "D:/dev/fpga/smartbrd/s3e/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/Dev-Cpp/Examples/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd
+xst -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -ifn smartbrd.xst -ofn smartbrd.syr
+ngdbuild -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -dd _ngo -nt timestamp -uc "C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf" -p xc3s500e-fg320-4 "smartbrd.ngc" smartbrd.ngd
+map -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -p xc3s500e-fg320-4 -cm area -pr b -k 4 -c 100 -o smartbrd_map.ncd smartbrd.ngd smartbrd.pcf
+par -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf
+trce -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -e 3 -l 3 -s 4 -xml smartbrd smartbrd.ncd -o smartbrd.twr smartbrd.pcf -ucf C:/fpgaSmartbrd/v10.02_013007/v10.02/src/resource/smartbrd.ucf
+bitgen -ise "C:/fpgaSmartbrd/v10.02_013007/v10.02/build/smartbrd/smartbrd.ise" -intstyle ise -f smartbrd.ut smartbrd.ncd

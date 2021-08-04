@@ -1,0 +1,65 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened:  2 Oct 1995    |
+-- +---------------------------+
+
+package analog_class is  
+
+type voltage is range integer'low to integer'high	units 
+		fV;
+		pV = 1000 fV;
+		nV = 1000 pV;
+		uV = 1000 nV; 
+		mV = 1000 uV; 
+		V = 1000 mV; 
+		kV = 1000 V; 
+end units; 
+
+type current is range integer'low to integer'high units 
+		fA;
+		pA = 1000 fA;
+		nA = 1000 pA;
+		uA = 1000 nA; 
+		mA = 1000 uA; 
+		A = 1000 mA; 
+end units; 
+
+type resistance is range integer'low to integer'high	units 
+		milli_ohm;
+		ohm = 1000 milli_ohm;
+		k_ohm = 1000 ohm;
+		M_ohm = 1000 k_ohm; 
+		G_ohm = 1000 M_ohm; 
+end units; 
+
+--type analog_signal is range -10 mV to 10 mV;
+--type analog_power is range -150 V to 150 V;
+--type analog_high_voltage is  range -15.0 kv to 15.0 kv;
+
+subtype analog is real range -15.0 to +15.0;
+
+--type analog is record
+--  volt : voltage;
+--  amp : current;
+--end record;
+
+type wire is record
+  volt : voltage;
+  amp : current;
+end record;
+
+  function "+" (a,b: analog) return analog;
+    
+end analog_class;
+
+package body analog_class is  
+
+  function "+" (a,b: analog) return analog is
+  begin
+    return analog(real(a) + real(b));
+  end "+";
+  
+end analog_class;
+
+

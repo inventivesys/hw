@@ -1,0 +1,28 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 24 Nov 1995    |
+-- +---------------------------+
+
+-- Function: overloaded operators for mixed types 
+--           relational operators and concatenation are not
+--           pre-defined for any mixed types.           
+
+-- Synthesis script: read -f vhdl mixed_op.dec
+
+library ieee;
+library vfp;
+
+package mixed_operators is
+  use ieee.std_logic_1164.all;
+  use vfp.twos_complement_types.all;
+  
+function "+" (a: std_ulogic_vector; b: integer) return std_ulogic_vector; -- 16.02.95
+function "+" (a: std_logic_vector; b: integer) return std_logic_vector; -- 16.02.95
+function "-" (a: std_ulogic_vector; b: integer) return std_ulogic_vector; -- 25.04.95
+function "-" (a: integer; b: std_ulogic_vector) return std_ulogic_vector; -- 25.04.95
+function "=" (a: std_ulogic_vector; b: integer) return std_ulogic_vector; -- 25.04.95
+function "=" (a: std_logic_vector; b: integer) return std_logic_vector; -- 03.02.95
+function "=" (a: twos_complement; b: integer) return twos_complement; -- 20.11.95
+
+end mixed_operators;

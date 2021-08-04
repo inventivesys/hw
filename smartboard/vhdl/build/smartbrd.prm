@@ -1,0 +1,17 @@
+PROMGEN: Xilinx Prom Generator I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+promgen -w -p mcs -c FF -o C:\Dev-Cpp\Examples\v10.02\build\smartbrd\//smartbrd -u 0 C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.bit -x xcf04s 
+
+PROM C:\Dev-Cpp\Examples\v10.02\build\smartbrd\//smartbrd.prm map: Tue Jan 30 12:04:46 2007
+
+Calculating PROM checksum with fill value ff
+
+Format        Mcs86 (32-bit)
+Size          512K
+PROM start    0000:0000
+PROM end      0007:ffff
+PROM checksum 03b0640a
+
+        Addr1        Addr2                     Date File(s)
+    0000:0000    0004:547f     Jan 30 11:59:38 2007 C:/Dev-Cpp/Examples/v10.02/build/smartbrd/smartbrd.bit

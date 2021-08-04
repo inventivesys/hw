@@ -1,0 +1,23 @@
+;
+;	  MTI script for analysis of
+;	  generic packages 
+;   into vfp library
+;
+cd $vfp_sim
+vcom -work vfp $vfp_vhdl/host_env.pkg
+vcom -work vfp $vfp_vhdl/twoscomp.pkg
+vcom -work vfp $vfp_vhdl/gen_func.pkg
+vcom -work vfp $vfp_vhdl/gen_func.bdy
+vcom -work vfp $vfp_vhdl/std_ops.pkg
+vcom -work vfp $vfp_vhdl/std_ops.bdy
+vcom -work vfp $vfp_vhdl/gen_conv.pkg
+vcom -work vfp $vfp_vhdl/gen_conv.bdy
+vcom -work vfp $vfp_vhdl/ops_2sc.pkg
+vcom -work vfp $vfp_vhdl/ops_2sc.bdy
+vcom -work vfp $vfp_vhdl/mixed_op.pkg
+vcom -work vfp $vfp_vhdl/mixed_op.bdy
+vcom -work vfp $vfp_vhdl/std_type.pkg
+vcom -work vfp $vfp_vhdl/constant.pkg
+vcom -work vfp $vfp_vhdl/bus.pkg
+vcom -work vfp $vfp_vhdl/analog.pkg
+

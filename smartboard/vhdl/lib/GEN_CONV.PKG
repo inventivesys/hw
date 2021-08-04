@@ -1,0 +1,41 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 29 Nov 1995    |
+-- +---------------------------+
+
+-- Function: conversion function matrix for types "integer",
+--           "std_ulogic_vector", and "twos_complement".           
+
+library ieee;
+library vfp;
+
+package generic_conversions is
+  use ieee.std_logic_1164.all;
+  use vfp.twos_complement_types.all;
+
+function to_integer (
+  a: std_ulogic_vector
+) return integer; -- 29.11.95  
+
+function to_integer (a: std_logic_vector) return integer; -- 03.02.95  
+function to_integer (a: twos_complement) return integer;   -- 29.11.95
+
+--function to_std_logic (a: integer) return std_logic;                -- 29.11.95
+
+function to_std_ulogic_vector (a: integer) return std_ulogic_vector;                -- 29.11.95
+function to_std_ulogic_vector (a: twos_complement) return std_ulogic_vector; -- 29.11.95
+-- see std_logic_1164	for std_logic_vector -> std_ulogic_vector conv/n func/n
+function to_std_ulogic_vector (a: integer; width: integer) return std_ulogic_vector;                -- 29.11.95
+
+function to_std_logic_vector (a: integer) return std_logic_vector;                -- 05.07.95
+
+function to_twos_complement (a: integer) return twos_complement;           -- 29.11.95
+function to_twos_complement (a: std_ulogic_vector) return twos_complement; -- 29.11.95
+
+end generic_conversions;
+
+
+
+
+

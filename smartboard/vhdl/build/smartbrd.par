@@ -1,0 +1,200 @@
+Release 8.2i par I.31
+Copyright (c) 1995-2006 Xilinx, Inc.  All rights reserved.
+
+MOBILEHOME::  Thu Feb 22 16:28:36 2007
+
+par -w -intstyle ise -ol std -t 1 smartbrd_map.ncd smartbrd.ncd smartbrd.pcf 
+
+
+Constraints file: smartbrd.pcf.
+Loading device for application Rf_Device from file '3s500e.nph' in environment C:\ise82.
+   "smartbrd" is an NCD, version 3.1, device xc3s500e, package fg320, speed -4
+
+Initializing temperature to 85.000 Celsius. (default - Range: -40.000 to 100.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.320 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2006-05-10".
+
+
+Design Summary Report:
+
+ Number of External IOBs                          44 out of 232    18%
+
+   Number of External Input IOBs                 12
+
+      Number of External Input IBUFs             12
+        Number of LOCed External Input IBUFs     12 out of 12    100%
+
+
+   Number of External Output IOBs                28
+
+      Number of External Output IOBs             28
+        Number of LOCed External Output IOBs     28 out of 28    100%
+
+
+   Number of External Bidir IOBs                  4
+
+      Number of External Bidir IOBs               4
+        Number of LOCed External Bidir IOBs       4 out of 4     100%
+
+
+   Number of BUFGMUXs                  1 out of 24      4%
+   Number of RAMB16s                   1 out of 20      5%
+   Number of Slices                  177 out of 4656    3%
+      Number of SLICEMs               54 out of 2328    2%
+
+
+
+Overall effort level (-ol):   Standard 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    Standard 
+
+Starting initial Timing Analysis.  REAL time: 9 secs 
+Finished initial Timing Analysis.  REAL time: 9 secs 
+
+
+Starting Placer
+
+Phase 1.1
+Phase 1.1 (Checksum:989f62) REAL time: 12 secs 
+
+Phase 2.31
+Phase 2.31 (Checksum:1312cfe) REAL time: 13 secs 
+
+Phase 3.2
+......
+...............
+
+
+Phase 3.2 (Checksum:98a243) REAL time: 20 secs 
+
+Phase 4.30
+Phase 4.30 (Checksum:26259fc) REAL time: 21 secs 
+
+Phase 5.8
+.....................................
+....
+.....................................
+....
+....
+...
+Phase 5.8 (Checksum:9d41cf) REAL time: 24 secs 
+
+Phase 6.5
+Phase 6.5 (Checksum:39386fa) REAL time: 24 secs 
+
+Phase 7.18
+Phase 7.18 (Checksum:42c1d79) REAL time: 26 secs 
+
+Phase 8.5
+Phase 8.5 (Checksum:4c4b3f8) REAL time: 26 secs 
+
+Writing design to file smartbrd.ncd
+
+
+Total REAL time to Placer completion: 27 secs 
+Total CPU time to Placer completion: 23 secs 
+
+Starting Router
+
+Phase 1: 1607 unrouted;       REAL time: 35 secs 
+
+Phase 2: 1346 unrouted;       REAL time: 35 secs 
+
+Phase 3: 294 unrouted;       REAL time: 36 secs 
+
+Phase 4: 294 unrouted; (0)      REAL time: 36 secs 
+
+Phase 5: 294 unrouted; (0)      REAL time: 36 secs 
+
+Phase 6: 294 unrouted; (0)      REAL time: 36 secs 
+
+Phase 7: 0 unrouted; (0)      REAL time: 37 secs 
+
+Phase 8: 0 unrouted; (0)      REAL time: 38 secs 
+
+
+Total REAL time to Router completion: 38 secs 
+Total CPU time to Router completion: 33 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP | BUFGMUX_X1Y11| No   |  161 |  0.086     |  0.203      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+
+   The Delay Summary Report
+
+
+The NUMBER OF SIGNALS NOT COMPLETELY ROUTED for this design is: 0
+
+   The AVERAGE CONNECTION DELAY for this design is:        0.931
+   The MAXIMUM PIN DELAY IS:                               4.673
+   The AVERAGE CONNECTION DELAY on the 10 WORST NETS is:   3.866
+
+   Listing Pin Delays by value: (nsec)
+
+    d < 1.00   < d < 2.00  < d < 3.00  < d < 4.00  < d < 5.00  d >= 5.00
+   ---------   ---------   ---------   ---------   ---------   ---------
+         914         550          67          10           5           0
+
+Timing Score: 0
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+------------------------------------------------------------------------------------------------------
+  Constraint                                | Requested  | Actual     | Logic  | Absolute   |Number of
+                                            |            |            | Levels | Slack      |errors   
+------------------------------------------------------------------------------------------------------
+  NET "clk_BUFGP/IBUFG" PERIOD = 20 ns HIGH | 20.000ns   | 13.036ns   | 4      | 6.964ns    | 0       
+   50%                                      |            |            |        |            |         
+------------------------------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 46 secs 
+Total CPU time to PAR completion: 39 secs 
+
+Peak Memory Usage:  167 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - No errors found.
+
+Number of error messages: 0
+Number of warning messages: 0
+Number of info messages: 0
+
+Writing design to file smartbrd.ncd
+
+
+
+PAR done!

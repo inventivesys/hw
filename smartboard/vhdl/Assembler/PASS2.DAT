@@ -1,0 +1,7145 @@
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;KCPSM3 Program - SPI Control of Amplifier and A/D converter on Spartan-3E Starter Kit.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Ken Chapman - Xilinx Ltd
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Version v1.00 - 21th December 2005
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This program uses an 8KHz interrupt to generate test waveforms on the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;4 analogue outputs provided by the Linear Technology LTC2624 device.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;As well as the port connections vital to communication with the UART and the SPI
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;FLASH memory, there are additional port connections used to disable the other
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;devices sharing the SPI bus on the Starter Kit board. Although these could have been
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;controlled at the hardware level, they are included in this code to aid
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;future investigations of communication with the other SPI devices using PicoBlaze.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Connections to the LEDs, switches and press buttons are provided to aid
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;development and enable further experiments. Otherwise know as having fun!
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Port definitions
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_control_port
+   OPERAND2-08
+    COMMENT-;SPI clock and chip selects
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_sck
+   OPERAND2-01
+    COMMENT-;                  SCK - bit0
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_rom_cs
+   OPERAND2-02
+    COMMENT-;    serial rom select - bit1
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_spare_control
+   OPERAND2-04
+    COMMENT-;                spare - bit2
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_amp_cs
+   OPERAND2-08
+    COMMENT-;     amplifier select - bit3
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_adc_conv
+   OPERAND2-10
+    COMMENT-;          A/D convert - bit4
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_dac_cs
+   OPERAND2-20
+    COMMENT-;           D/A select - bit5
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_amp_shdn
+   OPERAND2-40
+    COMMENT-;       amplifier SHDN - bit6
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_dac_clr
+   OPERAND2-80
+    COMMENT-;            D/A clear - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_output_port
+   OPERAND2-04
+    COMMENT-;SPI data output
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_sdo
+   OPERAND2-80
+    COMMENT-;   SDO - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_input_port
+   OPERAND2-01
+    COMMENT-;SPI data input
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_sdi
+   OPERAND2-80
+    COMMENT-;             SDI - bit7
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-SPI_amp_sdi
+   OPERAND2-40
+    COMMENT-;   amplifier SDI - bit6
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED_port
+   OPERAND2-80
+    COMMENT-;8 simple LEDs
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED0
+   OPERAND2-01
+    COMMENT-;     LED 0 - bit0
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED1
+   OPERAND2-02
+    COMMENT-;         1 - bit1
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED2
+   OPERAND2-04
+    COMMENT-;         2 - bit2
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED3
+   OPERAND2-08
+    COMMENT-;         3 - bit3
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED4
+   OPERAND2-10
+    COMMENT-;         4 - bit4
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED5
+   OPERAND2-20
+    COMMENT-;         5 - bit5
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED6
+   OPERAND2-40
+    COMMENT-;         6 - bit6
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LED7
+   OPERAND2-80
+    COMMENT-;         7 - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-switch_port
+   OPERAND2-00
+    COMMENT-;Read switches and press buttons
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-BTN_north
+   OPERAND2-01
+    COMMENT-;  Buttons     North - bit0
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-BTN_east
+   OPERAND2-02
+    COMMENT-;               East - bit1
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-BTN_south
+   OPERAND2-04
+    COMMENT-;              South - bit2
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-BTN_west
+   OPERAND2-08
+    COMMENT-;               West - bit3
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-switch0
+   OPERAND2-10
+    COMMENT-;  Switches        0 - bit4
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-switch1
+   OPERAND2-20
+    COMMENT-;                  1 - bit5
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-switch2
+   OPERAND2-40
+    COMMENT-;                  2 - bit6
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-switch3
+   OPERAND2-80
+    COMMENT-;                  3 - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;LCD interface ports
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The master enable signal is not used by the LCD display itself
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;but may be required to confirm that LCD communication is active.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This is required on the Spartan-3E Starter Kit if the StrataFLASH
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;is used because it shares the same data pins and conflicts must be avoided.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_output_port
+   OPERAND2-40
+    COMMENT-;LCD character module output data and control
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_E
+   OPERAND2-01
+    COMMENT-;   active High Enable        E - bit0
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_RW
+   OPERAND2-02
+    COMMENT-;   Read=1 Write=0           RW - bit1
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_RS
+   OPERAND2-04
+    COMMENT-;   Instruction=0 Data=1     RS - bit2
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_drive
+   OPERAND2-08
+    COMMENT-;   Master enable (active High) - bit3
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_DB4
+   OPERAND2-10
+    COMMENT-;   4-bit              Data DB4 - bit4
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_DB5
+   OPERAND2-20
+    COMMENT-;   interface          Data DB5 - bit5
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_DB6
+   OPERAND2-40
+    COMMENT-;                      Data DB6 - bit6
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_DB7
+   OPERAND2-80
+    COMMENT-;                      Data DB7 - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_input_port
+   OPERAND2-02
+    COMMENT-;LCD character module input data
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_spare0
+   OPERAND2-01
+    COMMENT-;    Spare bits               - bit0
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_spare1
+   OPERAND2-02
+    COMMENT-;    are zero                 - bit1
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_spare2
+   OPERAND2-04
+    COMMENT-;                             - bit2
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_spare3
+   OPERAND2-08
+    COMMENT-;                             - bit3
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_DB4
+   OPERAND2-10
+    COMMENT-;    4-bit           Data DB4 - bit4
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_DB5
+   OPERAND2-20
+    COMMENT-;    interface       Data DB5 - bit5
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_DB6
+   OPERAND2-40
+    COMMENT-;                    Data DB6 - bit6
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-LCD_read_DB7
+   OPERAND2-80
+    COMMENT-;                    Data DB7 - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-UART_status_port
+   OPERAND2-04
+    COMMENT-; UART status IN
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-UART_read_port
+   OPERAND2-06
+    COMMENT-; UART Rx data IN
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-UART_write_port
+   OPERAND2-01
+    COMMENT-; UART Tx data OUT
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-tx_half_full
+   OPERAND2-01
+    COMMENT-; Transmitter     half full - bit0
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-tx_full
+   OPERAND2-02
+    COMMENT-; FIFO               full - bit1
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-rx_half_full
+   OPERAND2-08
+    COMMENT-; Receiver        half full - bit3
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-rx_full
+   OPERAND2-10
+    COMMENT-; FIFO               full - bit4
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-rx_data_present
+   OPERAND2-04
+    COMMENT-; data present - bit2
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Special Register usage
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Scratch Pad Memory Locations
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Values read from the A/D converter
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-ADC0_lsb
+   OPERAND2-00
+    COMMENT-;ADC Channel 0 value LS-Byte
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-ADC0_msb
+   OPERAND2-01
+    COMMENT-;                    MS-Byte
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-ADC1_lsb
+   OPERAND2-02
+    COMMENT-;ADC Channel 1 value LS-Byte
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-ADC1_msb
+   OPERAND2-03
+    COMMENT-;                    MS-Byte
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Amplifier gain settings.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Stored value is the 4-bit code for gain setting
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;  Code  1   2   3    4     5    6     7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;  Gain -1  -2  -5  -10   -20  -50  -100
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-amp_A_gain
+   OPERAND2-04
+    COMMENT-;Amplifier A gain value
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-amp_B_gain
+   OPERAND2-05
+    COMMENT-;Amplifier B gain value
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Sample counter used to give activity indication on LEDs
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-sample_count
+   OPERAND2-06
+    COMMENT-;8-bit counter LS-Byte
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-decimal0
+   OPERAND2-07
+    COMMENT-;5 digit decimal value
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-decimal1
+   OPERAND2-08
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-decimal2
+   OPERAND2-09
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-decimal3
+   OPERAND2-0A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-decimal4
+   OPERAND2-0B
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Useful data constants
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-VREF_lsb
+   OPERAND2-72
+    COMMENT-;Reference voltage in milli-volts
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-VREF_msb
+   OPERAND2-06
+    COMMENT-;Nominal value 1.65v so value is 1650 (0672 hex)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Constant to define a software delay of 1us. This must be adjusted to reflect the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;clock applied to KCPSM3. Every instruction executes in 2 clock cycles making the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;calculation highly predictable. The '6' in the following equation even allows for
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;'CALL delay_1us' instruction in the initiating code.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; delay_1us_constant =  (clock_rate - 6)/4       Where 'clock_rate' is in MHz
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Example: For a 50MHz clock the constant value is (10-6)/4 = 11  (0B Hex).
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;For clock rates below 10MHz the value of 1 must be used and the operation will
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;become lower than intended.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-delay_1us_constant
+   OPERAND2-0B
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-string_start
+   OPERAND2-10
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-sB
+   OPERAND2-uart_data
+    COMMENT-; used to pass data to and from UART
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;ASCII table
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_a
+   OPERAND2-61
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_b
+   OPERAND2-62
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_c
+   OPERAND2-63
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_d
+   OPERAND2-64
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_e
+   OPERAND2-65
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_f
+   OPERAND2-66
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_g
+   OPERAND2-67
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_h
+   OPERAND2-68
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_i
+   OPERAND2-69
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_j
+   OPERAND2-6A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_k
+   OPERAND2-6B
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_l
+   OPERAND2-6C
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_m
+   OPERAND2-6D
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_n
+   OPERAND2-6E
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_o
+   OPERAND2-6F
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_p
+   OPERAND2-70
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_q
+   OPERAND2-71
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_r
+   OPERAND2-72
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_s
+   OPERAND2-73
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_t
+   OPERAND2-74
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_u
+   OPERAND2-75
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_v
+   OPERAND2-76
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_w
+   OPERAND2-77
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_x
+   OPERAND2-78
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_y
+   OPERAND2-79
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_z
+   OPERAND2-7A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_A
+   OPERAND2-41
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_B
+   OPERAND2-42
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_C
+   OPERAND2-43
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_D
+   OPERAND2-44
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_E
+   OPERAND2-45
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_F
+   OPERAND2-46
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_G
+   OPERAND2-47
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_H
+   OPERAND2-48
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_I
+   OPERAND2-49
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_J
+   OPERAND2-4A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_K
+   OPERAND2-4B
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_L
+   OPERAND2-4C
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_M
+   OPERAND2-4D
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_N
+   OPERAND2-4E
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_O
+   OPERAND2-4F
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_P
+   OPERAND2-50
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_Q
+   OPERAND2-51
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_R
+   OPERAND2-52
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_S
+   OPERAND2-53
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_T
+   OPERAND2-54
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_U
+   OPERAND2-55
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_V
+   OPERAND2-56
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_W
+   OPERAND2-57
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_X
+   OPERAND2-58
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_Y
+   OPERAND2-59
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_Z
+   OPERAND2-5A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_0
+   OPERAND2-30
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_1
+   OPERAND2-31
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_2
+   OPERAND2-32
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_3
+   OPERAND2-33
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_4
+   OPERAND2-34
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_5
+   OPERAND2-35
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_6
+   OPERAND2-36
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_7
+   OPERAND2-37
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_8
+   OPERAND2-38
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_9
+   OPERAND2-39
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_colon
+   OPERAND2-3A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_stop
+   OPERAND2-2E
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_semi_colon
+   OPERAND2-3B
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_minus
+   OPERAND2-2D
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_divide
+   OPERAND2-2F
+    COMMENT-;'/'
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_plus
+   OPERAND2-2B
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_comma
+   OPERAND2-2C
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_less_than
+   OPERAND2-3C
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_greater_than
+   OPERAND2-3E
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_equals
+   OPERAND2-3D
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_space
+   OPERAND2-20
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_CR
+   OPERAND2-0D
+    COMMENT-;carriage return
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_question
+   OPERAND2-3F
+    COMMENT-;'?'
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_dollar
+   OPERAND2-24
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_exclaim
+   OPERAND2-21
+    COMMENT-;'!'
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_BS
+   OPERAND2-08
+    COMMENT-;Back Space command character
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-character_LF
+   OPERAND2-0A
+    COMMENT-; line feed
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Initialise the system
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-cold_start
+INSTRUCTION-CALL
+   OPERAND1-SPI_init
+   OPERAND2-
+    COMMENT-;initialise SPI bus ports
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_reset
+   OPERAND2-
+    COMMENT-;initialise LCD display
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Write welcome message to LCD display
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-10
+    COMMENT-;Line 1 position 0
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_cursor
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-disp_PicoBlaze
+   OPERAND2-
+    COMMENT-;Display 'PicoBlaze Inside'
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-23
+    COMMENT-;Line 2 position 3
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_cursor
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-disp_ADC_Control
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1s
+   OPERAND2-
+    COMMENT-;wait 5 seconds
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1s
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1s
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1s
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1s
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_clear
+   OPERAND2-
+    COMMENT-;Clear display
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-00
+    COMMENT-;clear event counter
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s0
+   OPERAND2-sample_count
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-;set initial amplifier gain to 1 on both channels
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s0
+   OPERAND2-amp_A_gain
+    COMMENT-
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s0
+   OPERAND2-amp_B_gain
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-new_gain_set
+   OPERAND2-
+    COMMENT-;set, display the initial gain and enable interrupts
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The program is interrupt driven to maintain an 8KHz sample rate. The main body
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;of the program waits for an interrupt to occur. The interrupt updates all four
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;analogue outputs with values stored in scratch pad memory. This takes approximately
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;58us of the 125us available between interrupts. The main program then prepares
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;new values for the analogue outputs (in less than 67us) before waiting for the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;next interrupt.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-warm_start
+INSTRUCTION-LOAD
+   OPERAND1-sF
+   OPERAND2-FF
+    COMMENT-;flag set and wait for interrupt to be serviced
+      LABEL-
+INSTRUCTION-ENABLE
+   OPERAND1-INTERRUPT
+   OPERAND2-
+    COMMENT-;normal operation
+      LABEL-wait_int
+INSTRUCTION-INPUT
+   OPERAND1-sE
+   OPERAND2-switch_port
+    COMMENT-;test for button press changes to amplifier gain
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-sE
+   OPERAND2-BTN_north
+    COMMENT-;sE used as this in not effected by ISR
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-gain_increase
+    COMMENT-
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-sE
+   OPERAND2-BTN_south
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-gain_decrease
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-sF
+   OPERAND2-FF
+    COMMENT-;wait for interrupt
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-wait_int
+    COMMENT-;interrupt clears the flag
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Drive LEDs with simple binary count of the samples to indicate
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;that the design is active.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s0
+   OPERAND2-sample_count
+    COMMENT-;increment counter
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s0
+   OPERAND2-sample_count
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-LED_port
+    COMMENT-;count increments at 1Hz
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Display the A/D Channel 0 value as hex on LCD
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-;ensure next position is cleared
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-2C
+    COMMENT-;Line 2 position 12
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_cursor
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s0
+   OPERAND2-ADC0_msb
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-disp_hex_byte
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s0
+   OPERAND2-ADC0_lsb
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-disp_hex_byte
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-;ensure next position is cleared
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Convert A/D channel 0 value to decimal voltage
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The 14-bit signed value from the A/D (sign extended to 16-bits)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;relates to a voltage in the range -1.25v to +1.25v at the input
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;to the A/D converter relative to the 1.65v mid-rail reference point.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The 14-bit value can be translated into the -1.25v to +1.25v using the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;simple equation...
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   ADin = AD_value x 1.25/8192
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;It is possible to scale the AD_value by 1.25/8192 using a fixed point
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;representation.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;However, it is also possible to scale it by another factor at the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;same time which nicely converts to a binary value which is readily
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;converted to decimal. This can be achieved by example...
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;For an input to the A/D converter of +1.25v relative to the reference,
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;the A/D will output the maximum conversion of 1FFF (+8191).
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;In this case we would like to have the result value +1.250v which can be represented
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;by the integer value +1250 with appropiate positioning of the decimal point.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The constant to achieve this conversion is +1250/8191=+0.152606...
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Also a number requiring fixed point representation but how many bits to use?
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The way to resolve this is to realise that a multiplication will be
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;performed and it would be nice if the +1250 result ended up in a register pair.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;So if we perform a 16x16-bit multiplication such that the upper 16-bits of
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;the 32-bit result is the required value, then everything will resolve itself.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Hence the constant required is actually (1250x(2^16))/8191=+10001 (2711 hex).
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Using the example 1FFF x 2711 = 04E1F8EF
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   of which the upper 16-bits = 04E1 (+1249 decimal)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Likewise the other limit case is E000 x 2711 = FB1DE000
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   of which the upper 16-bits = FB1D (-1251 decimal)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The values can be made perfect by rounding before truncation
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s2
+   OPERAND2-ADC0_lsb
+    COMMENT-;Read A/D channel 0 value
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s3
+   OPERAND2-ADC0_msb
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-11
+    COMMENT-;scaling value for input to A/D converter
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-27
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-mult_16x16s
+   OPERAND2-
+    COMMENT-;[s7,s6,s5,s4]=[s3,s2]x[s1,s0]
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s5
+   OPERAND2-
+    COMMENT-;round value before truncation
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s6
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s7
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The register pair [s7,s6] now holds the binary value
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;representing the input level to the A/D converter in milli-volts.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This is now displayed on the LCD. Negative values need to be converted to
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;signed magnitude for display.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-20
+    COMMENT-;Line 2 position 0
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_cursor
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL disp_AD                        ;display A/D=
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s7
+   OPERAND2-80
+    COMMENT-;test sign bit of value
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-neg_AD
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_plus
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-AD_sign
+   OPERAND2-
+    COMMENT-
+      LABEL-neg_AD
+INSTRUCTION-XOR
+   OPERAND1-s6
+   OPERAND2-FF
+    COMMENT-;complement [s7,s6] to make positive
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s7
+   OPERAND2-FF
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s6
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s7
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;LOAD s5, character_minus
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-AD_sign
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-;display sign of value
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-disp_volts
+   OPERAND2-
+    COMMENT-;display 4 digit value as X.XXXv
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-read_from_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Convert A/D channel 0 value to display the VINA decimal voltage
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The same fundamental technique can be used to convert the 14-bit
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;A/D value into the level at the VINA input except that two more factors
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;must be considered.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The first is that the amplifier inverts and has gain. Therefore the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;VINA input level is opposite polarity and could be a smaller deviation
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;from the mid rail 1.65v reference.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Secondly, to display the actual voltage level at the VINA terminal
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;the 1.65v offset must be added.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The voltage at the VINA input is therefore...
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   VINA = [AD_value x (1.25/(8192 x G))]+1.65
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Following the same methodology as for the A/D value, it means that there
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;is a set of scaling factors to deal with the negative gain values.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; K = (+1250 x (2^16)) / (8191 x G)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;        G             K     (K Hex)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;       -1          -10001   (D8EF)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;       -2           -5001   (EC77)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;       -5           -2000   (F830)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;      -10           -1000   (FC18)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;      -20            -500   (FE0C)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;      -50            -200   (FF38)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;     -100            -100   (FF9C)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-read_from_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s2
+   OPERAND2-ADC0_lsb
+    COMMENT-;Read A/D channel 0 value
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s3
+   OPERAND2-ADC0_msb
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s4
+   OPERAND2-amp_A_gain
+    COMMENT-;read A gain and select appropiate gain setting
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-EF
+    COMMENT-;scaling value for amplifier gain of -1
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-D8
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s4
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-mult_VINA
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-77
+    COMMENT-;scaling value for amplifier gain of -2
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-EC
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s4
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-mult_VINA
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-30
+    COMMENT-;scaling value for amplifier gain of -5
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-F8
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s4
+   OPERAND2-03
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-mult_VINA
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-18
+    COMMENT-;scaling value for amplifier gain of -10
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-FC
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s4
+   OPERAND2-05
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-mult_VINA
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-0C
+    COMMENT-;scaling value for amplifier gain of -20
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-FE
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s4
+   OPERAND2-06
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-mult_VINA
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-38
+    COMMENT-;scaling value for amplifier gain of -50
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-FF
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s4
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-mult_VINA
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-9C
+    COMMENT-;scaling value for amplifier gain of -100
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-FF
+    COMMENT-
+      LABEL-mult_VINA
+INSTRUCTION-CALL
+   OPERAND1-mult_16x16s
+   OPERAND2-
+    COMMENT-;[s7,s6,s5,s4]=[s3,s2]x[s1,s0]
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s5
+   OPERAND2-
+    COMMENT-;round value before truncation
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s6
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s7
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s6
+   OPERAND2-VREF_lsb
+    COMMENT-;add 1.65v offset represented at 1650 (0672 hex)
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s7
+   OPERAND2-VREF_msb
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The register pair [s7,s6] now holds the binary value
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;representing the VINA input level in milli-volts.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This must be a positive value due to the offset of 1.65v
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;being greater than the maximum relative range of -1.25v to +1.25v.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This binary value can now be converted to a decimal digits
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;and displayed on the LCD.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;If the A/D value is maximum negative (E000) or maximum positive (1FFF)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;then an indication of the actual value being applied being greater or
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;less than that computed will be made.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-read_from_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-17
+    COMMENT-;Line 1 position 7
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_cursor
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL disp_VA                        ;display VA=
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;call delay_1ms
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;call send_test
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;call delay_20ms
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;call read_from_UART
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_20ms
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-read_from_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s2
+   OPERAND2-ADC0_lsb
+    COMMENT-;Read A/D channel 0 value
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s3
+   OPERAND2-ADC0_msb
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s3
+   OPERAND2-E0
+    COMMENT-;test for maximum negative
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-test_max_pos
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s2
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-test_max_pos
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_greater_than
+    COMMENT-;display >
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-disp_VINA_volts
+   OPERAND2-
+    COMMENT-
+      LABEL-test_max_pos
+INSTRUCTION-COMPARE
+   OPERAND1-s3
+   OPERAND2-1F
+    COMMENT-;test for maximum positive
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-disp_VINA_volts
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s2
+   OPERAND2-FF
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-disp_VINA_volts
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;LOAD s5, character_less_than        ;display <
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-disp_VINA_volts
+INSTRUCTION-CALL
+   OPERAND1-disp_volts
+   OPERAND2-
+    COMMENT-;display 4 digit value as X.XXXv
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-warm_start
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Display voltage level at in the form X.XXX on the LCD at current cursor position
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Value to be displayed must be unsigned (positive) in the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;[s7,s6] register pair. Only the lower 4 digits are displayed.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-disp_volts
+INSTRUCTION-CALL
+   OPERAND1-integer16_to_BCD
+   OPERAND2-
+    COMMENT-;convert [s7,s6] to BCD in scratch pad memory
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s5
+   OPERAND2-decimal3
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s5
+   OPERAND2-30
+    COMMENT-;convert to ASCII
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;LOAD s5, uart_data
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-read_from_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_stop
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s5
+   OPERAND2-decimal2
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s5
+   OPERAND2-30
+    COMMENT-;convert to ASCII
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;     ;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s5
+   OPERAND2-decimal1
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s5
+   OPERAND2-30
+    COMMENT-;convert to ASCII
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s5
+   OPERAND2-decimal0
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s5
+   OPERAND2-30
+    COMMENT-;convert to ASCII
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-;ensure next position is cleared
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_CR
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Changing amplifier gain using press buttons
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Possible gain values are
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   Gain   Amplifier
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;            code
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;    -1        1
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;    -2        2
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;    -5        3
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   -10        4
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   -20        5
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   -50        6
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;  -100        7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-read_from_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-gain_increase
+INSTRUCTION-DISABLE
+   OPERAND1-INTERRUPT
+   OPERAND2-
+    COMMENT-;stop normal operation
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s0
+   OPERAND2-amp_A_gain
+    COMMENT-;read current gain
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-08
+    COMMENT-;test for too big
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-new_gain_set
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-07
+    COMMENT-;maximum gain
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-new_gain_set
+   OPERAND2-
+    COMMENT-
+      LABEL-gain_decrease
+INSTRUCTION-DISABLE
+   OPERAND1-INTERRUPT
+   OPERAND2-
+    COMMENT-;stop normal operation
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s0
+   OPERAND2-amp_A_gain
+    COMMENT-;read current gain
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-new_gain_set
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-;minimum gain
+      LABEL-new_gain_set
+INSTRUCTION-STORE
+   OPERAND1-s0
+   OPERAND2-amp_A_gain
+    COMMENT-;store new value
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s2
+   OPERAND2-amp_B_gain
+    COMMENT-;form the amplifier control byte
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s2
+   OPERAND2-
+    COMMENT-;B amplifier set by upper 4 bits
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s2
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s2
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s2
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-OR
+   OPERAND1-s2
+   OPERAND2-s0
+    COMMENT-;A amplifier set by lower
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-set_amp
+   OPERAND2-
+    COMMENT-;set SPI amplifier
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;display gain setting on LCD
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-10
+    COMMENT-;Line 1 position 0
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_cursor
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_G
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_equals
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_minus
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s0
+   OPERAND2-amp_A_gain
+    COMMENT-;read A gain setting
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-;determine actual gain value
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-test_A2
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_1
+    COMMENT-;gain is -1
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-wait_no_press
+   OPERAND2-
+    COMMENT-
+      LABEL-test_A2
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-test_A3
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_2
+    COMMENT-;gain is -2
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-wait_no_press
+   OPERAND2-
+    COMMENT-
+      LABEL-test_A3
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-03
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-test_A4
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_5
+    COMMENT-;gain is -5
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-wait_no_press
+   OPERAND2-
+    COMMENT-
+      LABEL-test_A4
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-04
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-test_A5
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_1
+    COMMENT-;gain is -10
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_0
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-wait_no_press
+   OPERAND2-
+    COMMENT-
+      LABEL-test_A5
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-05
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-test_A6
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_2
+    COMMENT-;gain is -20
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_0
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-wait_no_press
+   OPERAND2-
+    COMMENT-
+      LABEL-test_A6
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-06
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-gain_A7
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_5
+    COMMENT-;gain is -50
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_0
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-wait_no_press
+   OPERAND2-
+    COMMENT-
+      LABEL-gain_A7
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_1
+    COMMENT-;gain is -100
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_0
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_0
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-wait_no_press
+INSTRUCTION-CALL
+   OPERAND1-delay_20ms
+   OPERAND2-
+    COMMENT-;delay to help avoid switch bounce
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-s0
+   OPERAND2-switch_port
+    COMMENT-;check for release of press buttons
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s0
+   OPERAND2-05
+    COMMENT-;north and south buttons
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-wait_no_press
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-warm_start
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;16-bit by 16-bit Signed multiplier
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;16 bit signed multiplication using shift and add technique.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The full precision 32-bit product is returned.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The key to signed multiplication is to think of all bits of the second operand
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;[s1,s0] as being positive except for the most significant bit. This means that
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;the first operand is added to the result in all cases when there is a '1' in the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;second operand except for the MSB case when the first operand is subtracted if there
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;is a '1'.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;[s7,s6,s5,s4]=[s3,s2]x[s1,s0]
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0,s1,s2,s3,s4,s5,s6,s7,s8,s9,sA
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-mult_16x16s
+INSTRUCTION-LOAD
+   OPERAND1-s7
+   OPERAND2-00
+    COMMENT-;clear accumulator
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s6
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-00
+    COMMENT-;Set bit 14 to act as a bit shift counter
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s8
+   OPERAND2-00
+    COMMENT-;sign extend [s3,s2] to form [s9,s8,s3,s2]
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s3
+   OPERAND2-80
+    COMMENT-;test sign of first operand
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-m16s_pos
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s8
+   OPERAND2-FF
+    COMMENT-
+      LABEL-m16s_pos
+INSTRUCTION-LOAD
+   OPERAND1-s9
+   OPERAND2-s8
+    COMMENT-;[s9,s8,s3,s2]=0000xxxx or FFFFxxxx as required
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-sA
+   OPERAND2-0F
+    COMMENT-;15 positive shift and add operations to perform
+      LABEL-m16s_loop
+INSTRUCTION-SR0
+   OPERAND1-s1
+   OPERAND2-
+    COMMENT-;shift right operand [s1,s0]
+      LABEL-
+INSTRUCTION-SRA
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NC
+   OPERAND2-m16s_noadd
+    COMMENT-;test for a '1'
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s4
+   OPERAND2-s2
+    COMMENT-;32-bit addition [s7,s6,s5,s4]=[s7,s6,s5,s4]+[s9,s8,s3,s2]
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s5
+   OPERAND2-s3
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s6
+   OPERAND2-s8
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s7
+   OPERAND2-s9
+    COMMENT-
+      LABEL-m16s_noadd
+INSTRUCTION-SL0
+   OPERAND1-s2
+   OPERAND2-
+    COMMENT-;multiply first operand by 2
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s3
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s8
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s9
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-sA
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-m16s_loop
+    COMMENT-;move to next unsigned bit
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-;test sign bit of operand [s1,s0]
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NC
+   OPERAND2-m16s_nosub
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s4
+   OPERAND2-s2
+    COMMENT-;32-bit subtraction [s7,s6,s5,s4]=[s7,s6,s5,s4]-[s9,s8,s3,s2]
+      LABEL-
+INSTRUCTION-SUBCY
+   OPERAND1-s5
+   OPERAND2-s3
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUBCY
+   OPERAND1-s6
+   OPERAND2-s8
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUBCY
+   OPERAND1-s7
+   OPERAND2-s9
+    COMMENT-
+      LABEL-m16s_nosub
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;16-bit positive integer to 5 digit decimal conversion
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Convert the 16 bit value in register set [s7,s6]
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;into the BCD decimal equivalent located in the scratch pad memory
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;locations 'decimal0' to 'decimal4' which must be in ascending locations.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Register set [s9,s8,s7,s6] are preserved.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Each digit is formed in turn starting with the least significant.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0,s1,s2,s3,s4,s5,s6,s7,s8
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-integer16_to_BCD
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-05
+    COMMENT-;5 digits to be formed from value up to 65535
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s8
+   OPERAND2-decimal0
+    COMMENT-;pointer for LS-Digit
+      LABEL-int_to_BCD_loop
+INSTRUCTION-CALL
+   OPERAND1-divide_16bit_by_10
+   OPERAND2-
+    COMMENT-;[s7,s6]=[s7,s6]/10  with remainder in s4
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s4
+   OPERAND2-(s8)
+    COMMENT-;remainder becomes digit value
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s8
+   OPERAND2-01
+    COMMENT-;move to next most significant digit
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-;one less digit to compute
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-int_to_BCD_loop
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Divide 16-bit binary integer by 10
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The value to be divided is held in register set [s7,s6]
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;and this is where the result is returned to.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;At then end of the integer division the remainder in the range 0 to 9
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;will be in register s4.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s1,s2,s3,s4,s5,s6,s7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Other registers are used but are preserved
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-divide_16bit_by_10
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-s6
+    COMMENT-;copy input value to [s5,s4]
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-s7
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s6
+   OPERAND2-00
+    COMMENT-;clear result
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s7
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s2
+   OPERAND2-00
+    COMMENT-;initialise '10' value into msb's of set [s3,s2]
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s3
+   OPERAND2-A0
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-0D
+    COMMENT-;13 subtract and shift iterations to be performed
+      LABEL-div10_loop
+INSTRUCTION-SUB
+   OPERAND1-s4
+   OPERAND2-s2
+    COMMENT-;perform 16-bit subtract [s5,s4]-[s3,s2]
+      LABEL-
+INSTRUCTION-SUBCY
+   OPERAND1-s5
+   OPERAND2-s3
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-C
+   OPERAND2-div10_restore
+    COMMENT-
+      LABEL-
+INSTRUCTION-SL1
+   OPERAND1-s6
+   OPERAND2-
+    COMMENT-;shift '1' into result because subtract was possible
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-div10_shifts
+   OPERAND2-
+    COMMENT-
+      LABEL-div10_restore
+INSTRUCTION-ADD
+   OPERAND1-s4
+   OPERAND2-s2
+    COMMENT-;perform 32-bit addition [s5,s4]+[s3,s2]
+      LABEL-
+INSTRUCTION-ADDCY
+   OPERAND1-s5
+   OPERAND2-s3
+    COMMENT-;to restore value
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s6
+   OPERAND2-
+    COMMENT-;shift '0' into result because subtract was not possible
+      LABEL-div10_shifts
+INSTRUCTION-SLA
+   OPERAND1-s7
+   OPERAND2-
+    COMMENT-;complete 16-bit shift left
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s3
+   OPERAND2-
+    COMMENT-;divide '10' value by 2 (shift right 1 place)
+      LABEL-
+INSTRUCTION-SRA
+   OPERAND1-s2
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s1
+   OPERAND2-01
+    COMMENT-;count iterations
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-div10_loop
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;SPI communication routines for Spartan-3E Starter Kit
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;These routines will work with two output ports and one input port which should be
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;defined as follows using CONSTANT directives.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   (replace 'pp' with appropriate port address in each case)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;In the list of CONSTANT directives, there are ports associated with all the SPI devices
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;provided on the board. Even if some devices are not used, it is vital that the remaining
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;devices are disabled. Leaving all signals connected and use of these routines will ensure
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;that all other devices are disabled when communicating with a particular device.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_control_port, pp       ;SPI clock and chip selects
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_sck, 01                ;                  SCK - bit0
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_rom_cs, 02             ;    serial rom select - bit1
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_spare_control, 04      ;                spare - bit2
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_amp_cs, 08             ;     amplifier select - bit3
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_adc_conv, 10           ;          A/D convert - bit4
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_dac_cs, 20             ;           D/A select - bit5
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_amp_shdn, 40           ;       amplifier SHDN - bit6
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_dac_clr, 80            ;            D/A clear - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_output_port, pp        ;SPI data output
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_sdo, 80                ;   SDO - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_input_port, pp         ;SPI data input
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_sdi, 80                ;             SDI - bit7
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CONSTANT SPI_amp_sdi, 40            ;   amplifier SDI - bit6
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Initialise SPI bus
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This routine should be used to initialise the SPI bus.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The SCK clock is made low.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Device selections are made inactive as follows
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   SPI_sck      = 0      Clock is Low (required)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   SPI_rom_cs   = 1      Deselect ROM
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   spare        = 1      spare control bit
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   SPI_amp_cs   = 1      Deselect amplifier
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   SPI_adc_conv = 0      A/D convert ready to apply positive pulse
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   SPI_dac_cs   = 1      Deselect D/A
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   SPI_amp_shdn = 0      Amplifier active and available
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   SPI_dac_clr  = 1      D/A clear off
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-SPI_init
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-AE
+    COMMENT-;normally AE
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;SPI communication routines for Programmable Amplifier
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Set the A and B channel gain of the Dual Amplifier (LTC6912-1).
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The gain value should be provided in the s2 register with the upper nibble
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;defining the gain for the B channel and lower nibble the gain for the A channel.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0000 = 0 hex = Gain  0 with input hi-Z and output driving
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0001 = 1 hex = Gain -1
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0010 = 2 hex = Gain -2
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0011 = 3 hex = Gain -5
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0100 = 4 hex = Gain -10
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0101 = 5 hex = Gain -20
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0110 = 6 hex = Gain -50
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 0111 = 7 hex = Gain -100
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 1000 = 8 hex = software shutdown (power on default). Hi-Z output.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;On return, the s2, register will contain the response from the LTC6912-1 amplifier.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This will be the same format and indicate the previous setting of the amplifier.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The response is obtained from the dedicated AMP_SDI signal since the LTC6912 output
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;is always active and can not be on a shared SPI bus.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-set_amp
+INSTRUCTION-CALL
+   OPERAND1-SPI_init
+   OPERAND2-
+    COMMENT-;ensure known state of bus and s0 register
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_amp_cs
+    COMMENT-;select low on Amplifier chip select
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-08
+    COMMENT-;8-bits to transmit and receive
+      LABEL-next_amp_SPI_bit
+INSTRUCTION-OUTPUT
+   OPERAND1-s2
+   OPERAND2-SPI_output_port
+    COMMENT-;output data bit
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_sck
+    COMMENT-;clock High (bit0)
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-;drive clock High
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-s3
+   OPERAND2-SPI_input_port
+    COMMENT-;read input bit
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s3
+   OPERAND2-SPI_amp_sdi
+    COMMENT-;detect state of received bit
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s2
+   OPERAND2-
+    COMMENT-;shift new data into result and move to next transmit bit
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_sck
+    COMMENT-;clock Low (bit0)
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-;drive clock Low
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s1
+   OPERAND2-01
+    COMMENT-;count bits
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-next_amp_SPI_bit
+    COMMENT-;repeat until finished
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_amp_cs
+    COMMENT-;deselect the amplifier
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;SPI communication routines for A/D Converter
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Sample A/D converter (LTC1407A-1) and return results.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Note there is a latency of one read to obtain the value. Each read results in the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;the analogue inputs being sampled and converted but this value will only be transmitted
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;during the next read and conversion cycle.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The results are returned as follows.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   Channel 0 in registers [s9,s8]
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   Channel 1 in registers [s7,s6]
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Where each is a 14-bit twos complement value sign extended to 16-bits.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Each 14-bit value represents the analogue voltage in the range -1.25v to +1.25v
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;relative to the reference voltage of 1.65v (3.3v/2). Hence the actual input voltage
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;range is 0.4v to 2.9v. Since the input to the A/D is supplied via the programmable
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;amplifier, the VINA and VINB inputs are inverted and may cover a smaller range if                       ;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;desired.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Examples
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   VINA = 0.65v with gain=-1 means input to A/D = 2.65v
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;      This is equivalent to +1.00v which is value (8192/1.25)*1 = 6553 (1999 hex)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;   VINA = 2.65v with gain=-1 means input to A/D = 0.65v
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;      This is equivalent to -1.00v which is value (2048/1.25)*-1 = -6553 (E667 hex)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Although the A/D converter claims to be an SPI device, it really
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;does not conform to the normal specification of the 4-wire interface.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Firstly the CONV signal is only pulsed High and does not behave like
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;a normal active low select signal. Secondly, the communication is
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;34 bits which does not fit a byte boundary, and thirdly, the data output
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;to its SDO pin changes as a result of rising edges of SCK clock which
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;is not the same as the falling edge used by other devices.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-adc_read
+INSTRUCTION-CALL
+   OPERAND1-SPI_init
+   OPERAND2-
+    COMMENT-;ensure known state of bus and s0 register
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_adc_conv
+    COMMENT-;Pulse AD-CONV High to take sample and start
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-;  conversion and transmission of data.
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_adc_conv
+    COMMENT-;AD-CONV Low
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-22
+    COMMENT-;34 clocks to read all data
+      LABEL-next_adc_bit
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_sck
+    COMMENT-;clock High (bit0)
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-;drive clock High
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s0
+   OPERAND2-SPI_sck
+    COMMENT-;clock Low (bit0)
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-SPI_control_port
+    COMMENT-;drive clock Low
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-s3
+   OPERAND2-SPI_input_port
+    COMMENT-;read input bit
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s3
+   OPERAND2-SPI_sdi
+    COMMENT-;detect state of received bit
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s6
+   OPERAND2-
+    COMMENT-;shift new data into result registers
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s7
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s8
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SLA
+   OPERAND1-s9
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s1
+   OPERAND2-01
+    COMMENT-;count bits
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-next_adc_bit
+    COMMENT-;repeat until finished
+      LABEL-
+INSTRUCTION-SRX
+   OPERAND1-s9
+   OPERAND2-
+    COMMENT-;sign extend 14-bit result in [s9,s8]
+      LABEL-
+INSTRUCTION-SRA
+   OPERAND1-s8
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SRX
+   OPERAND1-s9
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SRA
+   OPERAND1-s8
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SRX
+   OPERAND1-s7
+   OPERAND2-
+    COMMENT-;sign extend 14-bit result in [s7,s6]
+      LABEL-
+INSTRUCTION-SRA
+   OPERAND1-s6
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SRX
+   OPERAND1-s7
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SRA
+   OPERAND1-s6
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;LCD text messages
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Display 'PicoBlaze' on LCD at current cursor position
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-disp_PicoBlaze
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_S
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_m
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_a
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_r
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_t
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_b
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_o
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_a
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_r
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_d
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Display 'ADC Control' on LCD at current cursor position
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-disp_ADC_Control
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_I
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_O
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_space
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_C
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_o
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_n
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_t
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_r
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_o
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_l
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Display 'VA=' on LCD at current cursor position
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-disp_VA
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_V
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_equals
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Display 'A/D' on LCD at current cursor position
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-disp_AD
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_A
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_divide
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_D
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_equals
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-send_test
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-character_u
+    COMMENT-;ADC0_msb
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-character_a
+    COMMENT-;ADC0_lsb
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; ==========================================================================================
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;     UART routines
+      LABEL-read_from_UART
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-sE
+   OPERAND2-02
+    COMMENT-
+      LABEL-uart_again
+INSTRUCTION-INPUT
+   OPERAND1-s0
+   OPERAND2-UART_status_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s0
+   OPERAND2-rx_data_present
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;JUMP      Z, read_from_uart_end
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-s1
+   OPERAND2-UART_read_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s1
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-character_t
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-uart_data
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_data
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-sE
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-uart_again
+    COMMENT-
+      LABEL-read_from_uart_end
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-send_to_UART
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-s0
+   OPERAND2-UART_status_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-TEST
+   OPERAND1-s0
+   OPERAND2-tx_full
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-send_to_UART
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-uart_data
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s0
+   OPERAND2-UART_write_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; ==========================================================================================
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Transmit ASCII string to UART
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; An ASCII string must be provided in scratch pad memory commencing at the
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; location specified by a  named 'string_start'. The string must
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; end with a carriage return and LF.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Registers used s1 and 'uart_data'.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; s0 is then used in subroutine 'send_to_UART'
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-transmit_string
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-string_start
+    COMMENT-; locate start of string
+      LABEL-next_char_tx
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-uart_data
+   OPERAND2-( s1 )
+    COMMENT-; read character from memory
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-; transmit character
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-uart_data
+   OPERAND2-character_LF
+    COMMENT-; test for last character
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-Z
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s1
+   OPERAND2-01
+    COMMENT-; move to next character
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-next_char_tx
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Value to ASCII Conversions and LCD display
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Convert hexadecimal value provided in register s0 into ASCII characters
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The value provided must can be any value in the range 00 to FF and will be converted into
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;two ASCII characters.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;     The upper nibble will be represented by an ASCII character returned in register s2.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;     The lower nibble will be represented by an ASCII character returned in register s1.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The ASCII representations of '0' to '9' are 30 to 39 hexadecimal which is simply 30 hex
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;added to the actual decimal value. The ASCII representations of 'A' to 'F' are 41 to 46
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;hexadecimal requiring a further addition of 07 to the 30 already added.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1 and s2.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-hex_byte_to_ASCII
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-s0
+    COMMENT-;remember value supplied
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-;isolate upper nibble
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-hex_to_ASCII
+   OPERAND2-
+    COMMENT-;convert
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s2
+   OPERAND2-s0
+    COMMENT-;upper nibble value in s2
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-s1
+    COMMENT-;restore complete value
+      LABEL-
+INSTRUCTION-AND
+   OPERAND1-s0
+   OPERAND2-0F
+    COMMENT-;isolate lower nibble
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-hex_to_ASCII
+   OPERAND2-
+    COMMENT-;convert
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-s0
+    COMMENT-;lower nibble value in s1
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Convert hexadecimal value provided in register s0 into ASCII character
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Register used s0
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-hex_to_ASCII
+INSTRUCTION-SUB
+   OPERAND1-s0
+   OPERAND2-0A
+    COMMENT-;test if value is in range 0 to 9
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-C
+   OPERAND2-number_char
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-s0
+   OPERAND2-07
+    COMMENT-;ASCII char A to F in range 41 to 46
+      LABEL-number_char
+INSTRUCTION-ADD
+   OPERAND1-s0
+   OPERAND2-3A
+    COMMENT-;ASCII char 0 to 9 in range 30 to 40
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Display the two character HEX value of the register contents 's0' on
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;the LCD display at the current cursor position.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s2, s4, s5, s6
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-disp_hex_byte
+INSTRUCTION-CALL
+   OPERAND1-hex_byte_to_ASCII
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s6
+   OPERAND2-s1
+    COMMENT-;remember lower hex character
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-s2
+    COMMENT-;display upper hex character
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-s6
+    COMMENT-;display lower hex character
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-uart_data
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-send_to_UART
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;CALL LCD_write_data
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Software delay routines
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Delay of 1us.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Constant value defines reflects the clock applied to KCPSM3. Every instruction
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;executes in 2 clock cycles making the calculation highly predictable. The '6' in
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;the following equation even allows for 'CALL delay_1us' instruction in the initiating code.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; delay_1us_constant =  (clock_rate - 6)/4       Where 'clock_rate' is in MHz
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-delay_1us
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-delay_1us_constant
+    COMMENT-
+      LABEL-wait_1us
+INSTRUCTION-SUB
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-wait_1us
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Delay of 40us.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-delay_40us
+INSTRUCTION-LOAD
+   OPERAND1-s1
+   OPERAND2-28
+    COMMENT-;40 x 1us = 40us
+      LABEL-wait_40us
+INSTRUCTION-CALL
+   OPERAND1-delay_1us
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s1
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-wait_40us
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Delay of 1ms.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s2
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-delay_1ms
+INSTRUCTION-LOAD
+   OPERAND1-s2
+   OPERAND2-19
+    COMMENT-;25 x 40us = 1ms
+      LABEL-wait_1ms
+INSTRUCTION-CALL
+   OPERAND1-delay_40us
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s2
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-wait_1ms
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Delay of 20ms.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Delay of 20ms used during initialisation.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s2, s3
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-delay_20ms
+INSTRUCTION-LOAD
+   OPERAND1-s3
+   OPERAND2-14
+    COMMENT-;20 x 1ms = 20ms
+      LABEL-wait_20ms
+INSTRUCTION-CALL
+   OPERAND1-delay_1ms
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s3
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-wait_20ms
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Delay of approximately 1 second.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s2, s3, s4
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-delay_1s
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-32
+    COMMENT-;50 x 20ms = 1000ms
+      LABEL-wait_1s
+INSTRUCTION-CALL
+   OPERAND1-delay_20ms
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s4
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-wait_1s
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;LCD Character Module Routines
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;LCD module is a 16 character by 2 line display but all displays are very similar
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The 4-wire data interface will be used (DB4 to DB7).
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The LCD modules are relatively slow and software delay loops are used to slow down
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;KCPSM3 adequately for the LCD to communicate. The delay routines are provided in
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;a different section (see above in this case).
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Pulse LCD enable signal 'E' high for greater than 230ns (1us is used).
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Register s4 should define the current state of the LCD output port.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s4
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-LCD_pulse_E
+INSTRUCTION-XOR
+   OPERAND1-s4
+   OPERAND2-LCD_E
+    COMMENT-;E=1
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1us
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s4
+   OPERAND2-LCD_E
+    COMMENT-;E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Write 4-bit instruction to LCD display.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The 4-bit instruction should be provided in the upper 4-bits of register s4.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Note that this routine does not release the master enable but as it is only
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;used during initialisation and as part of the 8-bit instruction write it
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;should be acceptable.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s4
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-LCD_write_inst4
+INSTRUCTION-AND
+   OPERAND1-s4
+   OPERAND2-F8
+    COMMENT-;Enable=1 RS=0 Instruction, RW=0 Write, E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-;set up RS and RW >40ns before enable pulse
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_pulse_E
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Write 8-bit instruction to LCD display.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The 8-bit instruction should be provided in register s5.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Instructions are written using the following sequence
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Upper nibble
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; wait >1us
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Lower nibble
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; wait >40us
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s4, s5
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-LCD_write_inst8
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-AND
+   OPERAND1-s4
+   OPERAND2-F0
+    COMMENT-;Enable=0 RS=0 Instruction, RW=0 Write, E=0
+      LABEL-
+INSTRUCTION-OR
+   OPERAND1-s4
+   OPERAND2-LCD_drive
+    COMMENT-;Enable=1
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst4
+   OPERAND2-
+    COMMENT-;write upper nibble
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1us
+   OPERAND2-
+    COMMENT-;wait >1us
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-s5
+    COMMENT-;select lower nibble with
+      LABEL-
+INSTRUCTION-SL1
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;Enable=1
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;RS=0 Instruction
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;RW=0 Write
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;E=0
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst4
+   OPERAND2-
+    COMMENT-;write lower nibble
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_40us
+   OPERAND2-
+    COMMENT-;wait >40us
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-F0
+    COMMENT-;Enable=0 RS=0 Instruction, RW=0 Write, E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-;Release master enable
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Write 8-bit data to LCD display.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The 8-bit data should be provided in register s5.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Data bytes are written using the following sequence
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Upper nibble
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; wait >1us
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Lower nibble
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; wait >40us
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s4, s5
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-LCD_write_data
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-s5
+    COMMENT-
+      LABEL-
+INSTRUCTION-AND
+   OPERAND1-s4
+   OPERAND2-F0
+    COMMENT-;Enable=0 RS=0 Instruction, RW=0 Write, E=0
+      LABEL-
+INSTRUCTION-OR
+   OPERAND1-s4
+   OPERAND2-0C
+    COMMENT-;Enable=1 RS=1 Data, RW=0 Write, E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-;set up RS and RW >40ns before enable pulse
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_pulse_E
+   OPERAND2-
+    COMMENT-;write upper nibble
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1us
+   OPERAND2-
+    COMMENT-;wait >1us
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-s5
+    COMMENT-;select lower nibble with
+      LABEL-
+INSTRUCTION-SL1
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;Enable=1
+      LABEL-
+INSTRUCTION-SL1
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;RS=1 Data
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;RW=0 Write
+      LABEL-
+INSTRUCTION-SL0
+   OPERAND1-s4
+   OPERAND2-
+    COMMENT-;E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-;set up RS and RW >40ns before enable pulse
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_pulse_E
+   OPERAND2-
+    COMMENT-;write lower nibble
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_40us
+   OPERAND2-
+    COMMENT-;wait >40us
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-F0
+    COMMENT-;Enable=0 RS=0 Instruction, RW=0 Write, E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-;Release master enable
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Read 8-bit data from LCD display.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The 8-bit data will be read from the current LCD memory address
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;and will be returned in register s5.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;It is advisable to set the LCD address (cursor position) before
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;using the data read for the first time otherwise the display may
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;generate invalid data on the first read.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Data bytes are read using the following sequence
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Upper nibble
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; wait >1us
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Lower nibble
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; wait >40us
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s4, s5
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-LCD_read_data8
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-0E
+    COMMENT-;Enable=1 RS=1 Data, RW=1 Read, E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-;set up RS and RW >40ns before enable pulse
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s4
+   OPERAND2-LCD_E
+    COMMENT-;E=1
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1us
+   OPERAND2-
+    COMMENT-;wait >260ns to access data
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-s5
+   OPERAND2-LCD_input_port
+    COMMENT-;read upper nibble
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s4
+   OPERAND2-LCD_E
+    COMMENT-;E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1us
+   OPERAND2-
+    COMMENT-;wait >1us
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s4
+   OPERAND2-LCD_E
+    COMMENT-;E=1
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1us
+   OPERAND2-
+    COMMENT-;wait >260ns to access data
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-s0
+   OPERAND2-LCD_input_port
+    COMMENT-;read lower nibble
+      LABEL-
+INSTRUCTION-XOR
+   OPERAND1-s4
+   OPERAND2-LCD_E
+    COMMENT-;E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-
+      LABEL-
+INSTRUCTION-AND
+   OPERAND1-s5
+   OPERAND2-F0
+    COMMENT-;merge upper and lower nibbles
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SR0
+   OPERAND1-s0
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-OR
+   OPERAND1-s5
+   OPERAND2-s0
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-04
+    COMMENT-;Enable=0 RS=1 Data, RW=0 Write, E=0
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-s4
+   OPERAND2-LCD_output_port
+    COMMENT-;Stop reading 5V device and release master enable
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_40us
+   OPERAND2-
+    COMMENT-;wait >40us
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Reset and initialise display to communicate using 4-bit data mode
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Includes routine to clear the display.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Requires the 4-bit instructions 3,3,3,2 to be sent with suitable delays
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;following by the 8-bit instructions to set up the display.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;  28 = '001' Function set, '0' 4-bit mode, '1' 2-line, '0' 5x7 dot matrix, 'xx'
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;  06 = '000001' Entry mode, '1' increment, '0' no display shift
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;  0C = '00001' Display control, '1' display on, '0' cursor off, '0' cursor blink off
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;  01 = '00000001' Display clear
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s2, s3, s4
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-LCD_reset
+INSTRUCTION-CALL
+   OPERAND1-delay_20ms
+   OPERAND2-
+    COMMENT-;wait more that 15ms for display to be ready
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-30
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst4
+   OPERAND2-
+    COMMENT-;send '3'
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_20ms
+   OPERAND2-
+    COMMENT-;wait >4.1ms
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst4
+   OPERAND2-
+    COMMENT-;send '3'
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1ms
+   OPERAND2-
+    COMMENT-;wait >100us
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst4
+   OPERAND2-
+    COMMENT-;send '3'
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_40us
+   OPERAND2-
+    COMMENT-;wait >40us
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s4
+   OPERAND2-20
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst4
+   OPERAND2-
+    COMMENT-;send '2'
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_40us
+   OPERAND2-
+    COMMENT-;wait >40us
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-28
+    COMMENT-;Function set
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst8
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-06
+    COMMENT-;Entry mode
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst8
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-0C
+    COMMENT-;Display control
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst8
+   OPERAND2-
+    COMMENT-
+      LABEL-LCD_clear
+INSTRUCTION-LOAD
+   OPERAND1-s5
+   OPERAND2-01
+    COMMENT-;Display clear
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst8
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1ms
+   OPERAND2-
+    COMMENT-;wait >1.64ms for display to clear
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay_1ms
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Position the cursor ready for characters to be written.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The display is formed of 2 lines of 16 characters and each
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;position has a corresponding address as indicated below.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;                   Character position
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;           0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Line 1 - 80 81 82 83 84 85 86 87 88 89 8A 8B 8C 8D 8E 8F
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Line 2 - C0 C1 C2 C3 C4 C5 C6 C7 C8 C9 CA CB CC CD CE CF
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;This routine will set the cursor position using the value provided
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;in register s5. The upper nibble will define the line and the lower
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;nibble the character position on the line.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; Example s5 = 2B will position the cursor on line 2 position 11
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Registers used s0, s1, s2, s3, s4
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-LCD_cursor
+INSTRUCTION-TEST
+   OPERAND1-s5
+   OPERAND2-10
+    COMMENT-;test for line 1
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-set_line2
+    COMMENT-
+      LABEL-
+INSTRUCTION-AND
+   OPERAND1-s5
+   OPERAND2-0F
+    COMMENT-;make address in range 80 to 8F for line 1
+      LABEL-
+INSTRUCTION-OR
+   OPERAND1-s5
+   OPERAND2-80
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst8
+   OPERAND2-
+    COMMENT-;instruction write to set cursor
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-set_line2
+INSTRUCTION-AND
+   OPERAND1-s5
+   OPERAND2-0F
+    COMMENT-;make address in range C0 to CF for line 2
+      LABEL-
+INSTRUCTION-OR
+   OPERAND1-s5
+   OPERAND2-C0
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-LCD_write_inst8
+   OPERAND2-
+    COMMENT-;instruction write to set cursor
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Interrupt Service Routine (ISR)
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Interrupts occur at 1 second intervals.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Each interrupt is used to take analogue samples and store them in scratch pad memory.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;The interrupt clears a 'flag' in register sF so that the main program can advance.
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-ISR
+INSTRUCTION-CALL
+   OPERAND1-adc_read
+   OPERAND2-
+    COMMENT-;read A/D Converter
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s8
+   OPERAND2-ADC0_lsb
+    COMMENT-;store ADC Channel 0
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s9
+   OPERAND2-ADC0_msb
+    COMMENT-
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s6
+   OPERAND2-ADC1_lsb
+    COMMENT-;store ADC Channel 1
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s7
+   OPERAND2-ADC1_msb
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-sF
+   OPERAND2-00
+    COMMENT-;clear flag
+      LABEL-
+INSTRUCTION-RETURNI
+   OPERAND1-ENABLE
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;Interrupt Vector
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;**************************************************************************************
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-ADDRESS
+   OPERAND1-3FF
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-ISR
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;

@@ -1,0 +1,72 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 17 Nov 1995    |
+-- +---------------------------+
+
+-- Function: overloaded operators for types "std_ulogic" & "std_ulogic_vector"
+--           relational operators and concatenation are 
+--           pre-defined for any scalar or 1-d array of discrete types.           
+
+-- Synthesis script: read -f vhdl std_ops.dec
+
+library ieee;
+
+package std_operators is
+  use ieee.std_logic_1164.all;
+  
+function "+" (a, b: std_ulogic_vector) return std_ulogic_vector;    -- 23.11.95
+function "+" (a, b: std_logic_vector) return std_logic_vector;    -- 23.11.95
+function "-" (a, b: std_ulogic_vector) return std_ulogic_vector;    -- 23.11.95
+function "*" (a, b: std_ulogic_vector) return std_ulogic_vector;    -- 23.11.95
+function "/" (a, b: std_ulogic_vector) return std_ulogic_vector;    -- 23.11.95
+function "mod" (a, b: std_ulogic_vector) return std_ulogic_vector;  -- 23.11.95
+function "rem" (a, b: std_ulogic_vector) return std_ulogic_vector;  -- 23.11.95
+function "**" (a, b: std_ulogic_vector) return std_ulogic_vector;   -- 23.11.95
+function "+" (a: std_ulogic_vector) return std_ulogic_vector;       -- 23.11.95
+function "-" (a: std_ulogic_vector) return std_ulogic_vector;       -- 23.11.95
+function "abs" (a: std_ulogic_vector) return std_ulogic_vector;     -- 23.11.95
+
+-- A std_ulogic_vector holds data which may be considered to be either logical
+-- or numeric in nature. If the data in the std_ulogic_vector is logical in nature,
+-- the logical operators would expect to have the
+-- operands of the same length. This is reflected by the same length check
+-- performed in the functions. For an std_ulogic_vector of a numeric nature,
+-- the arithmetic operators consider the operands to be 
+-- numbers which have no sense of "wordlength" and thus the arithmetic functions
+-- permit operands of different wordlength; again this is reflected in the  
+-- wordlength check and sign-extension function within the arithmetic functions.
+-- 'Nuff said!
+
+--  Some notes on the implementation of particular operators:
+--  1. + 
+--    The plus operator is implemented with no concern for the carry out from
+--    the final stage. Thus this mimics the behaviour of counters which loop
+--    back to zero after reaching the all 1's state.,
+--  2. -
+--    The minus operator is also implemented in a similar fashion, with
+--    the carry out from the last stage being ignored so that repeated y := y - 1
+--    operations loop down through zero followed by 2N-1 where N is the wordlength
+--    of y.
+--
+--
+--
+
+-- function "not" (a: std_ulogic) return std_ulogic;         -- 17.11.95
+-- function "and" (a, b: std_ulogic) return std_ulogic;      -- 23.11.95
+-- function "or" (a, b: std_ulogic) return std_ulogic;       -- 23.11.95  
+-- function "xor" (a, b: std_ulogic) return std_ulogic;      -- 23.11.95
+-- function "nand" (a, b: std_ulogic) return std_ulogic;     -- 23.11.95
+-- function "nor" (a, b: std_ulogic) return std_ulogic;      -- 23.11.95  
+-- function "xnor" (a, b: std_ulogic) return std_ulogic;  -- 23.11.95
+  
+-- function "not" (a: std_ulogic_vector) return std_ulogic_vector;         -- 23.11.95
+-- function "and" (a, b: std_ulogic_vector) return std_ulogic_vector;      -- 23.11.95
+-- function "or" (a, b: std_ulogic_vector) return std_ulogic_vector;       -- 23.11.95  
+-- function "xor" (a, b: std_ulogic_vector) return std_ulogic_vector;      -- 23.11.95
+-- function "nand" (a, b: std_ulogic_vector) return std_ulogic_vector;     -- 23.11.95
+-- function "nor" (a, b: std_ulogic_vector) return std_ulogic_vector;      -- 23.11.95  
+-- function "xnor" (a, b: std_ulogic_vector) return std_ulogic_vector;  -- 23.11.95
+
+end std_operators;
+

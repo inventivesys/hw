@@ -1,0 +1,81 @@
+-- +---------------------------+
+-- |   Copyright 1996 DOULOS   |
+-- |      Generic Library      |
+-- |    opened: 18 Apr 1995    |
+-- +---------------------------+
+
+library ieee;
+
+package standard_types is
+  use ieee.std_logic_1164.all;
+
+type vfp_ulogic is ('U', 'X', '0', '1', 'Z', 'W', 'L', 'H', '-');
+type vfp_ulogic_vector is array (integer range <>) of vfp_ulogic;
+
+subtype positive_1_bit is integer range 0 to 1;
+subtype positive_2_bit is integer range 0 to 3;
+subtype positive_3_bit is integer range 0 to 7;
+subtype positive_4_bit is integer range 0 to 15;
+subtype positive_5_bit is integer range 0 to 31;
+subtype positive_6_bit is integer range 0 to 63;
+subtype positive_7_bit is integer range 0 to 127;
+subtype positive_8_bit is integer range 0 to 255;
+subtype positive_9_bit is integer range 0 to 511;
+subtype positive_10_bit is integer range 0 to 1023;
+subtype positive_11_bit is integer range 0 to 2047;
+subtype positive_12_bit is integer range 0 to 4095;
+subtype positive_13_bit is integer range 0 to 8191;
+subtype positive_14_bit is integer range 0 to 16383;
+subtype positive_15_bit is integer range 0 to 32767;
+subtype positive_16_bit is integer range 0 to 65535;
+subtype positive_17_bit is integer range 0 to 131071;
+subtype positive_18_bit is integer range 0 to 262143;
+subtype positive_19_bit is integer range 0 to 524287;
+subtype positive_20_bit is integer range 0 to 1048575;
+subtype positive_21_bit is integer range 0 to 2097151;
+subtype positive_22_bit is integer range 0 to 4194303;
+subtype positive_23_bit is integer range 0 to 8388607;
+subtype positive_24_bit is integer range 0 to 16777215;
+subtype positive_25_bit is integer range 0 to 33554431;
+subtype positive_26_bit is integer range 0 to 67108863;
+subtype positive_27_bit is integer range 0 to 134217727;
+subtype positive_28_bit is integer range 0 to 268435455;
+subtype positive_29_bit is integer range 0 to 536870911;
+subtype positive_30_bit is integer range 0 to 1073741823;
+subtype positive_31_bit is integer range 0 to 2147483647;
+
+subtype integer_2_bit is integer range -2 to 1;
+subtype integer_3_bit is integer range -4 to 3;
+subtype integer_4_bit is integer range -8 to 7;
+subtype integer_5_bit is integer range -16 to 15;
+subtype integer_6_bit is integer range -32 to 31;
+subtype integer_7_bit is integer range -64 to 63;
+subtype integer_8_bit is integer range -128 to 127;
+subtype integer_9_bit is integer range -256 to 255;
+subtype integer_10_bit is integer range -512 to 511;
+subtype integer_11_bit is integer range -1024 to 1023;
+subtype integer_12_bit is integer range -2048 to 2047;
+subtype integer_13_bit is integer range -4096 to 4095;
+subtype integer_14_bit is integer range -8192 to 8191;
+subtype integer_15_bit is integer range -16384 to 16383;
+subtype integer_16_bit is integer range -32768 to 32767;
+subtype integer_17_bit is integer range -65536 to 65535;
+subtype integer_18_bit is integer range -131072 to 131071;
+subtype integer_19_bit is integer range -262144 to 262143;
+subtype integer_20_bit is integer range -524288 to 524287;
+subtype integer_21_bit is integer range -1048576 to 1048575;
+subtype integer_22_bit is integer range -2097152 to 2097151;
+subtype integer_23_bit is integer range -4194304 to 4194303;
+subtype integer_24_bit is integer range -8388608 to 8388607;
+subtype integer_25_bit is integer range -16777216 to 16777215;
+subtype integer_26_bit is integer range -33554432 to 33554431;
+subtype integer_27_bit is integer range -67108864 to 67108863;
+subtype integer_28_bit is integer range -134217728 to 134217727;
+subtype integer_29_bit is integer range -268435456 to 268435455;
+subtype integer_30_bit is integer range -536870912 to 536870911;
+subtype integer_31_bit is integer range -1073741824 to 1073741823;
+
+end standard_types;
+
+
+
