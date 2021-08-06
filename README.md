@@ -4,3 +4,4 @@
 3. power management board - a board to serve as a power distribution module
 4. PIC32 DSP board - a board to use PIC32MX to implement the FIR filter and fft
 5. Photo detector - a board of photo detector
+6. programmable DC current source` - a programmable high precision DC current source device board 
